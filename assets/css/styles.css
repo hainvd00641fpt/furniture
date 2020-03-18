@@ -1,0 +1,733 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow&display=swap');
+
+body {
+    font-family: Barlow;
+}
+
+.header {
+    height: 100px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.container-cust {
+    width: 100%;
+    max-width: 1110px;
+    margin: 0 auto;
+}
+.navbar-main {
+    width: 100%;
+    max-width: 1110px;
+    margin: 0 auto;
+    display: flex;
+    font-size: 16px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 19px;
+    padding-bottom: 20px;
+}
+.nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+}
+.nav>li {
+    margin-right: 41px;
+}
+.nav>li>a {
+    text-decoration: none;
+    font-family: Barlow, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 29px;
+    text-transform: uppercase;
+
+    color: #000000;
+}
+
+a.active {
+    border-bottom: 4px solid;
+    padding-bottom: 10px;
+}
+/* */
+.img-header {
+    height: 910px;
+    margin-bottom: 30px;
+    background-image: url('../img/home/home1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* .img-header img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+} */
+
+.space-around .col-left {
+    padding-left: 0px;
+}
+
+.space-around .div-1 {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.space-around .div-1 h4 {
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    text-transform: uppercase;
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 54px;
+    color: #FFFFFF;
+}
+
+.space-around .div-2 {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.space-around .div-2 .div-22 {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.space-around .div-2 .div-23 {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+.space-around .div-3 {
+    position: relative;
+    margin-bottom: 95px;
+}
+
+.space-around .div-3 h4 {
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    text-transform: uppercase;
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 54px;
+    color: #FFFFFF;
+}
+
+.space-around .div-4 {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.space-around .div-4 .div-41 {
+    position: absolute;
+    top: 0px;
+}
+
+.space-around .div-4 .div-42 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.space-around .div-4 .div-43 {
+    position: absolute;
+    bottom: 0px;
+    right: -15px;
+}
+
+.space-around .div-5 {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.space-around .div-5 h4 {
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    text-transform: uppercase;
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 54px;
+    color: #FFFFFF;
+}
+
+.space-around .div-6 {
+    position: relative;
+    margin-bottom: 95px;
+    height: 460px;
+}
+
+.space-around .div-6 .div-61 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.space-around .div-6 .div-62 {
+    position: absolute;
+    right: -15px;
+    top: 0px;
+}
+
+.space-around .div-6 .div-63 {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+.product-top {
+    height: 1345px;
+    background-color: #EEEEEE;
+    /* opacity: 0.5; */
+    margin-bottom: 146px;
+}
+
+.product-top .title-div h2{
+    text-align: center;
+    padding-top: 48px;
+    padding-bottom: 50px;
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 66px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+
+}
+
+.product-top .product-div .name-div {
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 38px;
+    color: #000000;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.product-top .product-div .code-div {
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: rgba(0, 0, 0, 0.6);
+    
+}
+
+.product-top .product-div .price-div {
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 38px;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.product-top .product-div button {
+    width: 156px;
+    height: 40px;
+    background: #14212B;
+    color: #FFFFFF;
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 29px;
+    border: none;
+    margin-bottom: 30px;
+}
+
+.product-top .product-div button:hover {
+    background-color: #FFFFFF;
+    color: #14212B;
+    border: 1px solid #14212B;
+}
+
+.product-top .product-div .col41{
+    padding-left: 0px;
+}
+
+.product-top .product-div .col42{
+    padding-left: 10px;
+}
+
+.product-top .product-div .col43{
+    padding-left: 20px;
+}
+
+.product-category {
+    height: auto;
+    /* opacity: 0.5; */
+    margin-top: 26px;
+    margin-bottom: 30px;
+}
+
+.product-category .title-div h2{
+    text-align: center;
+    padding-top: 48px;
+    padding-bottom: 50px;
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 66px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+
+}
+
+.product-category .product-div .name-div {
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 38px;
+    color: #000000;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.product-category .product-div .code-div {
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: rgba(0, 0, 0, 0.6);
+    
+}
+
+.product-category .product-div .price-div {
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 38px;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.product-category .product-div button {
+    width: 156px;
+    height: 40px;
+    background: #14212B;
+    color: #FFFFFF;
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 29px;
+    border: none;
+    margin-bottom: 30px;
+    transition: .3s;
+    padding-top: 0px;
+}
+
+.product-category .product-div button:hover {
+    background-color: #FFFFFF;
+    color: #14212B;
+    border: 1px solid #14212B;
+}
+
+.product-category .product-div .col41{
+    padding-left: 0px;
+}
+
+.product-category .product-div .col42{
+    padding-left: 10px;
+}
+
+.product-category .product-div .col43{
+    padding-left: 20px;
+}
+
+.collection {
+    height: 742px;
+    background-color: #293845;
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 38px;
+    color: #FFFFFF;
+}
+
+.collection h5 {
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+.collection .img-text-div {
+    position: relative;
+}
+
+.collection .img-text-div h5{
+    position: absolute;
+    top: 291px;
+    left: 467px;
+}
+
+.header-category {
+    height: 183px;
+    background-image: url('../img/bacground-category.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-category .img-text-div {
+    position: relative;
+    height: 100%;
+}
+
+.header-category h2 { 
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 66px;
+    text-transform: uppercase;
+    color: #000000;
+    text-align: center;
+    padding-top: 58px;
+}
+
+.header-category p {
+    border: 1px solid #000000;
+    width: 160px;
+    position: absolute;
+    left: 474px;
+    margin-top: 0px;
+}
+
+.filte .nav {
+    margin-left: 70px;
+}
+
+.filte .nav>li {
+    margin-right: 0px;
+    margin-left: 30px;
+}
+
+.filte .nav p {
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #999999;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    margin-top: 16px;
+}
+
+.filte .nav button {
+    width: 95px;
+    height: 30px;
+    background-color: #14212B;
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 29px;
+    border: none;
+    color: #FFFFFF;
+    padding-top: 0px;
+    margin-top: 20px;
+    transition: .3s;
+}
+
+.filte .nav button:hover {
+    background-color: #FFFFFF;
+    color: #14212B;
+    border: 1px solid #14212B;
+}
+
+.pagination-product .nav>li {
+    margin-right: 10px;
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+.main-content {
+    height: auto;
+    margin-top: 20px;
+}
+
+.main-content .shop-sidebar{
+    position: relative;
+    height: 135px;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.main-content .shop-sidebar-3 {
+    height: 120px;
+}
+
+.main-content .shop-sidebar img{
+    position: absolute;
+    top: 20px;
+    left: 15px;
+}
+
+.main-content .shop-sidebar h4{
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+    font-family: Barlow;
+    color: #000000;
+    
+}
+
+.main-content .shop-sidebar p{
+    position: absolute;
+    top: 55px;
+    left: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Barlow;
+    color: #999999;
+    width: 215px;
+    line-height: 20px;
+}
+
+.product-detail-div {
+    position: relative;
+}
+
+.main-content .img-small {
+    background-color: #EEEEEE;
+    position: absolute;
+    width: 80px;
+    height: 216px;
+}
+
+.main-content .img-big {
+    position: absolute;
+    left: 110px;
+    width: 420px;
+    height: 420px;
+    background-color: #999999;
+}
+
+.main-content .info-product {
+    position: absolute;
+    right: 15px;
+    width: 275px;
+    height: 401px;
+}
+
+.main-content .info-product h5 { 
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 38px;
+    color: #000000;
+    margin-bottom: 0px;
+    margin-top: -10px;
+}
+
+.main-content .info-product p { 
+    font-size: 14px;
+    color: #999999;
+    line-height: 20px;
+    font-weight: 600;
+}
+
+.main-content .info-product .price-div { 
+    font-size: 24px;
+    color: #a8854a;
+    /* line-height: 20px; */
+}
+
+b {
+    color: black;
+}
+
+.main-content .info-product button { 
+    width: 95px;
+    height: 30px;
+    background-color: #14212B;
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 29px;
+    border: none;
+    color: #FFFFFF;
+    padding-top: 0px;
+    margin-top: 20px;
+    transition: .3s;
+    margin-bottom: 10px;
+}
+
+.main-content .info-product button:hover {
+    background-color: #FFFFFF;
+    color: #14212B;
+    border: 1px solid #14212B;
+}
+
+.description {
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+.related-product h3 {
+    position: relative;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+.related-product h3::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 0;
+    border-bottom: 2px solid #a8854a;
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none; }
+
+.tabs {
+  display: block;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  overflow: hidden; }
+  .tabs [class^="tab"] label,
+  .tabs [class*=" tab"] label {
+    cursor: pointer;
+    display: block;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1em;
+    padding: 2rem 0;
+    text-align: center; }
+  .tabs [class^="tab"] [type="radio"],
+  .tabs [class*=" tab"] [type="radio"] {
+    border-bottom: 1px solid rgba(239, 237, 239, 0.5);
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+    width: 100%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .tabs [class^="tab"] [type="radio"]:hover, .tabs [class^="tab"] [type="radio"]:focus,
+    .tabs [class*=" tab"] [type="radio"]:hover,
+    .tabs [class*=" tab"] [type="radio"]:focus {
+      border-bottom: 1px solid #a8854a; }
+    .tabs [class^="tab"] [type="radio"]:checked,
+    .tabs [class*=" tab"] [type="radio"]:checked {
+      border-bottom: 2px solid #a8854a; }
+    .tabs [class^="tab"] [type="radio"]:checked + div,
+    .tabs [class*=" tab"] [type="radio"]:checked + div {
+      opacity: 1; }
+    .tabs [class^="tab"] [type="radio"] + div,
+    .tabs [class*=" tab"] [type="radio"] + div {
+      display: block;
+      opacity: 0;
+      padding: 2rem 0;
+      width: 90%;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+  .tabs .tab-2 {
+    width: 50%; }
+    .tabs .tab-2 [type="radio"] + div {
+      width: 200%;
+      margin-left: 200%; }
+    .tabs .tab-2 [type="radio"]:checked + div {
+      margin-left: 0; }
+    .tabs .tab-2:last-child [type="radio"] + div {
+      margin-left: 100%; }
+    .tabs .tab-2:last-child [type="radio"]:checked + div {
+      margin-left: -100%; }
+/* footer */
+footer .footer-top {
+    height: 98px;
+}
+
+footer .footer-top .nav {
+    padding-top: 40px;
+}
+
+footer .footer-bottom {
+    height: 333px;
+    background-color: #293845;
+}
+
+footer .footer-bottom .row {
+    padding-top: 60px;
+}
+
+footer h5 {
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 29px;
+    color: #FFFFFF;
+    padding-bottom: 30px;
+}
+
+footer p {
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}

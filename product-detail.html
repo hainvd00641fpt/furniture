@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Normalize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- Style -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="navbar-main">
+            <div class="header-start">
+                <a href="index.html" class="logo">
+                    <img src="assets/img/logo.png" alt="logo" height="61px">
+                </a>
+            </div>
+            <nav id="navbar-menu">
+                <ul class="nav">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="about-us.html">Giới thiệu</a></li>
+                    <li><a href="product.html" class="active">Sản phẩm</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                    <li><a href="service.html">Dịch vụ</a></li>
+                    <li><a href="store.html">Cửa hàng</a></li>
+                </ul>
+            </nav>
+            <div class="header-end">
+                <ul class="nav">
+                    <li><img src="./assets/img/icon/search.png" alt="icon-search"></li>
+                    <li><img src="./assets/img/icon/heart.png" alt="icon-heart"></li>
+                    <li><img src="./assets/img/icon/bag.png" alt="icon-bag"></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+     <!-- Body -->
+     <div class="header-category" style="margin-bottom:25px;">
+        <div class="container-cust img-text-div">
+           <h2>SẢN PHẨM</h2>
+           <p></p>
+        </div>
+   </div>
+    <div class="pagination-product container-cust">
+        <ul class="nav">
+            <li>Home ></li>
+            <li>Shop ></li>
+            <li>All Furniture ></li>
+            <li>Product title goes here </li>
+        </ul>
+    </div>
+    <div class="main-content container-cust">
+        <div class="row">
+            <div class="col-9 product-detail-div">
+                <div class="img-small">
+                    <!-- <img src="https://via.placeholder.com/150" alt="">
+                    <img src="https://via.placeholder.com/150" alt=""> -->
+                </div>
+                <div class="img-big">
+                </div>
+                <div class="info-product">
+                    <h5>Product title goes here</h5>
+                    <p class="price-div">120.000 VNĐ</p>
+                    <p>Availability: In Stock</p>
+                    <p style="width: 275px;">We believe that great design and quality is about solving problems, collaborating, and working with the finest materials and creators.</p>
+                    <button class="btn-add">Add to cart</button>
+                    <p><b>SP123456789</b></p>
+                    <p><b>Categories:</b> All Furniture, Chairs, Home Office, Kitchen & Dining, Living Room</p>
+                    <p><b>Tags:</b> Accessories, Chair, Dining Chairs, Kitchen & Dining</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="shop-sidebar shop-sidebar-1">
+                    <img src="./assets/img/icon/heart.png" alt="">
+                    <h4>Delivery info</h4>
+                    <p>From then, delivery is generally within 2-10 days, depending on your location.</p>
+                </div>
+                <div class="shop-sidebar shop-sidebar-2">
+                    <img src="./assets/img/icon/heart.png" alt="">
+                    <h4>30 days returns</h4>
+                    <p>Not the right fit? No worries. We'll arrange pick up and a full refund within 7 days.</p>
+                </div>
+                <div class="shop-sidebar shop-sidebar-3">
+                    <img src="./assets/img/icon/heart.png" alt="">
+                    <h4>Up to 10 years warranty</h4>
+                    <p>Quality comes first and our products are designed to last.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="description container-cust">
+        <div class="tabs">
+            <div class="tab-2">
+                <label for="tab2-1">Description</label>
+                <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
+                <div>
+                    <h4>Tab One</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas consequat id velit quis vestibulum. Nam id orci eu urna mollis porttitor. Nunc nisi ante, gravida at velit eu, aliquet sodales dui. Sed laoreet condimentum nisi a egestas.</p><p>Donec interdum ante ut enim consequat, quis varius nulla dapibus. Vivamus mollis fermentum augue a varius. Vestibulum in sapien at lectus gravida lobortis vulputate sed metus. Duis scelerisque justo et maximus efficitur. Donec eu eleifend quam. Curabitur aliquet commodo sapien eget vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum vel aliquet nunc, finibus posuere lorem. Suspendisse consectetur volutpat est ut ornare.</p>
+                </div>
+            </div>
+            <div class="tab-2">
+                <label for="tab2-2">Additional information</label>
+                <input id="tab2-2" name="tabs-two" type="radio">
+                <div>
+                    <h4>Tab Two</h4>
+                    <p>Quisque sit amet turpis leo. Maecenas sed dolor mi. Pellentesque varius elit in neque ornare commodo ac non tellus. Mauris id iaculis quam. Donec eu felis quam. Morbi tristique lorem eget iaculis consectetur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean at tellus eget risus tempus ultrices. Nam condimentum nisi enim, scelerisque faucibus lectus sodales at.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="related-product container-cust">
+        <h3>Related product</h3>
+        <div class="product-category">
+            <div class="row product-div container-cust">
+                <div class="col-4 col41">
+                    <div class="">
+                        <img src="./assets/img/home/product4.png" alt="img product">
+                        <p class="name-div">Product title goes here</p>
+                        <p class="code-div">SP123456789</p>
+                        <p class="price-div">120.000 VNĐ</p>
+                        <button class="btn-add">Add to cart</button>
+                    </div>
+                </div>
+                <div class="col-4 col42">
+                    <div class="">
+                        <img src="./assets/img/home/product5.png" alt="img product">
+                        <p class="name-div">Product title goes here</p>
+                        <p class="code-div">SP123456789</p>
+                        <p class="price-div">120.000 VNĐ</p>
+                        <button class="btn-add">Add to cart</button>
+                    </div>
+                </div>
+                <div class="col-4 col43">
+                    <div class="">
+                        <img src="./assets/img/home/product6.png" alt="img product">
+                        <p class="name-div">Product title goes here</p>
+                        <p class="code-div">SP123456789</p>
+                        <p class="price-div">120.000 VNĐ</p>
+                        <button class="btn-add">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Body -->
+    <div class="" style="height: 200px;"></div>
+    <footer>
+        <div class="footer-top">
+            <ul class="nav container-cust">
+                <li><img src="./assets/img/icon/facebook.png" alt="icon-search"></li>
+                <li><img src="./assets/img/icon/instagram.png" alt="icon-heart"></li>
+                <li><img src="./assets/img/icon/google.png" alt="icon-bag"></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <div class="row container-cust">
+                <div class="col" style="padding-left: 0px;">
+                    <h5>Danh mục sản phẩm </h5>
+                    <p>Phòng khách</p>
+                    <p>Phòng làm việc</p>
+                    <p>Phòng ăn</p>
+                    <p>Phòng ngủ</p>
+                    <p>Phòng vệ sinh</p>
+                    <p>Đồ trang trí</p>
+                </div>
+                <div class="col">
+                    <h5>Dịch vụ khách hàng </h5>
+                    <p>Dịch vụ giao hàng</p>
+                    <p>Chính sách đổi trả</p>
+                    <p>Chính sách bảo hành</p>
+                    <p>Click và Nhận hàng</p>
+                    <p>QAQ - Câu hỏi thường gặp</p>
+                    <p>Hotline: +84 xxx xxx xxx</p>
+                </div>
+                <div class="col">
+                    <h5>Furnitiry là ai </h5>
+                    <p>Giới thiệu Furnitiry</p>
+                </div>
+                <div class="col">
+                    <h5>Liên hệ </h5>
+                    <p>Số 80 Trúc Khê, phường Láng </p>
+                    <p>Hạ, quận Đống Đa, TP. Hà Nội</p>
+                    <p>ĐT: +84 xxx xxx xxx</p>
+                    <p>Email: furnitiry@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function openOption(evt, nameOption) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(nameOption).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>
+  </body>
+<script type="text/javascript" src="./assets/js/main.js"></script>
+
+</html>
