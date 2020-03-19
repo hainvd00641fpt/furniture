@@ -1,34 +1,470 @@
-<style>
-/* figure {
-	width: 300px;
-	height: 200px;
-	margin: 0;
-	padding: 0;
-	background: #fff;
-	overflow: hidden;
-} */
-/* Zoom In #1 */
-.hover01 figure img {
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-.hover01 figure:hover img {
-	-webkit-transform: scale(1.3);
-	transform: scale(1.3);
-}
-</style>
+<!DOCTYPE html>
+<html lang="en">
 
-<h2 id="demo01">1. Zoom In #1</h2>
-<div class="hover01 column">
-  <div>
-    <figure><img src="https://picsum.photos/300/200?image=244" /></figure>
-  </div>
-  <div>
-    <figure><img src="https://picsum.photos/300/200?image=1024" /></figure>
-  </div>
-  <div>
-    <figure><img src="https://picsum.photos/300/200?image=611" /></figure>
-  </div>
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Normalize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- Style -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+		.zoom {
+			display:inline-block;
+			position: relative;
+		}
+		.zoom:after {
+			content:'';
+			display:block; 
+			width:33px; 
+			height:33px; 
+			position:absolute; 
+			top:0;
+			right:0;
+			background:url(icon.png);
+		}
+		.modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.9);
+    }
+
+    /* Modal Content */
+    .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        width: 90%;
+        max-width: 500px;
+    }
+
+    /* The Close Button */
+    .close {
+        color: white;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #999;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .mySlides {
+        display: none;
+    }
+
+    .cursor {
+        cursor: pointer;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    .caption-container {
+        text-align: center;
+        background-color: black;
+        padding: 2px 16px;
+        color: white;
+    }
+
+    .demo {
+        opacity: 0.6;
+    }
+
+    .active,
+    .demo:hover {
+        opacity: 1;
+    }
+
+    img.hover-shadow {
+        transition: 0.3s;
+    }
+	</style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="navbar-main">
+            <div class="header-start">
+                <a href="index.html" class="logo">
+                    <img src="assets/img/logo.png" alt="logo" height="61px">
+                </a>
+            </div>
+            <nav id="navbar-menu" class="header-bot">
+                <ul class="nav">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="about-us.html">Giới thiệu</a></li>
+                    <li><a href="product.html" class="active">Sản phẩm</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                    <li><a href="service.html">Dịch vụ</a></li>
+                    <li><a href="store.html">Cửa hàng</a></li>
+                </ul>
+            </nav>
+            <div class="header-end">
+                <ul class="nav">
+                    <li><img src="./assets/img/icon/search.png" alt="icon-search"></li>
+                    <li><a href="./wishlist.html" title="My wishlist"><img src="./assets/img/icon/heart.png" alt="icon-heart"></a></li>
+                    <li><a href="./cart.html" title="Cart"><img src="./assets/img/icon/bag.png" alt="icon-bag" id="dropdownCart"></a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+     <!-- Body -->
+     <div class="img-header header-category" style="margin-bottom:25px;">
+        <div class="container-cust">
+            <div id="cart">
+                <div class="cart-div">
+                    <div class="popup-cart">
+                        <div class="">
+                            <div class="item-product">
+                                <img src="./assets/img/home/bedroom1.jpg"alt="">
+                                <h5>Ten san pham</h5>
+                                <p><b>1</b> x 200.000 VNĐ</p>
+                                <i class="material-icons md-14">close</i>
+                            </div>
+                            <hr style="margin-top: 10px; margin-bottom: 10px;" />
+                            <div class="item-product">
+                                <img src="./assets/img/home/bedroom1.jpg"alt="">
+                                <h5>Ten san pham</h5>
+                                <p><b>1</b> x 200.000 VNĐ</p>
+                                <i class="material-icons md-14">close</i>
+                            </div>
+                            <hr style="margin-top: 10px; margin-bottom: 10px;" />
+                        </div>
+                        <div class="subtotal">
+                            <h5>Subtotal:</h5>
+                            <p>400.000 VNĐ</p>
+                        </div>
+                        <div class="btn-viewcart">
+                            <button>VIEW CART</button>
+                            <button>CHECKOUT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-cust img-text-div">
+           <h2>SẢN PHẨM</h2>
+           <h6></h6>
+        </div>
+   </div>
+    <div class="pagination-product container-cust">
+        <ul class="nav">
+            <li>Home ></li>
+            <li>Shop ></li>
+            <li>All Furniture ></li>
+            <li>Product title goes here </li>
+        </ul>
+    </div>
+    <div class="main-content container-cust">
+        <div class="row">
+            <div class="col-9 product-detail-div">
+                <div class="img-small" id="thumb_img">
+                    <img class="active" src="./assets/img/home/bedroom1.jpg" onclick="changeimg('./assets/img/home/bedroom1.jpg',this);" style="margin-bottom: 15px;" alt="">
+                    <img src="./assets/img/home/bedroom2.jpg" onclick="changeimg('./assets/img/home/bedroom2.jpg',this);" alt="">
+                </div>
+                <div class="img-big">
+                    <span class='zoom' id='ex1'>
+						<img id="img" src='./assets/img/home/bedroom1.jpg' onclick="openModal();currentSlide(1)" class="hover-shadow cursor" width='420' height='420' alt='img product'/>
+						<div id="myModal" class="modal">
+							<span class="close cursor" onclick="closeModal()">&times;</span>
+							<div class="modal-content">
+					
+								<div class="mySlides">
+									<div class="numbertext">1 / 2</div>
+									<img src="./assets/img/home/bedroom1.jpg" style="width:100%">
+								</div>
+					
+								<div class="mySlides">
+									<div class="numbertext">2 / 2</div>
+									<img src="./assets/img/home/bedroom2.jpg" style="width:100%">
+								</div>
+					
+								<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+								<a class="next" onclick="plusSlides(1)">&#10095;</a>
+					
+								<div class="caption-container">
+									<p id="caption"></p>
+								</div>
+							</div>
+						</div>
+                    </span>
+                </div>
+                <div class="info-product">
+                    <h5>Product title goes here</h5>
+                    <p class="price-div">120.000 VNĐ</p>
+                    <p>Availability: In Stock</p>
+                    <p style="width: 275px;">We believe that great design and quality is about solving problems, collaborating, and working with the finest materials and creators.</p>
+                    <div class="qty">
+                        <span class="minus">-</span>
+                        <input type="number" class="count" name="qty" value="1">
+                        <span class="plus">+</span>
+                    </div>
+                    <button class="btn-add button1">Add to cart</button>
+                    <p><b>SP123456789</b></p>
+                    <p><b>Categories:</b> All Furniture, Chairs, Home Office, Kitchen & Dining, Living Room</p>
+                    <p><b>Tags:</b> Accessories, Chair, Dining Chairs, Kitchen & Dining</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="shop-sidebar shop-sidebar-1">
+                    <img src="./assets/img/icon/heart.png" alt="">
+                    <h4>Delivery info</h4>
+                    <p>From then, delivery is generally within 2-10 days, depending on your location.</p>
+                </div>
+                <div class="shop-sidebar shop-sidebar-2">
+                    <img src="./assets/img/icon/heart.png" alt="">
+                    <h4>30 days returns</h4>
+                    <p>Not the right fit? No worries. We'll arrange pick up and a full refund within 7 days.</p>
+                </div>
+                <div class="shop-sidebar shop-sidebar-3">
+                    <img src="./assets/img/icon/heart.png" alt="">
+                    <h4>Up to 10 years warranty</h4>
+                    <p>Quality comes first and our products are designed to last.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="description container-cust">
+        <div class="tabs">
+            <div class="tab-2">
+                <label for="tab2-1">Thông tin chi tiết</label>
+                <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
+                <div>
+                    <p>- Kích thước: 1.4 x 2 m (Giá: 5.790.000đ) <br>
+                        - Kích thước: 1.6 x 2 m (Giá: 5.890.000đ) <br>
+                        - Kích thước: 1.4 x 2 m (Giá: 5.990.000đ) <br>
+                        - Chất liệu: Gỗ thông nhập khẩu Newzealand <br>
+                        - Màu sắc: Trắng phối gỗ <br>
+                        - Xuất xứ: Việt Nam - Hàng xuất khẩu</p>
+                </div>
+            </div>
+            <div class="tab-2">
+                <label for="tab2-2">Thông tin khác</label>
+                <input id="tab2-2" name="tabs-two" type="radio">
+                <div>
+                    <p>Nội dung đang được cập nhật ...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="related-product container-cust">
+        <h3>Related product</h3>
+        <div class="product-category">
+            <div class="row product-div container-cust">
+                <div class="col-4 col41">
+                    <div class="">
+                        <img src="./assets/img/home/product4.png" alt="img product">
+                        <p class="name-div">Product title goes here</p>
+                        <p class="code-div">SP123456789</p>
+                        <p class="price-div">120.000 VNĐ</p>
+                        <button class="btn-add">Add to cart</button>
+                    </div>
+                </div>
+                <div class="col-4 col42">
+                    <div class="">
+                        <img src="./assets/img/home/product5.png" alt="img product">
+                        <p class="name-div">Product title goes here</p>
+                        <p class="code-div">SP123456789</p>
+                        <p class="price-div">120.000 VNĐ</p>
+                        <button class="btn-add">Add to cart</button>
+                    </div>
+                </div>
+                <div class="col-4 col43">
+                    <div class="">
+                        <img src="./assets/img/home/product6.png" alt="img product">
+                        <p class="name-div">Product title goes here</p>
+                        <p class="code-div">SP123456789</p>
+                        <p class="price-div">120.000 VNĐ</p>
+                        <button class="btn-add">Add to cart</button>
+                    </div>
+                </div>
+                <a href="#">Xem thêm >></a>
+            </div>
+        </div>
+    </div>
+    <!-- End Body -->
+    <footer>
+        <div class="footer-top">
+            <ul class="nav container-cust">
+                <li><img src="./assets/img/icon/facebook.png" alt="icon-search"></li>
+                <li><img src="./assets/img/icon/instagram.png" alt="icon-heart"></li>
+                <li><img src="./assets/img/icon/google.png" alt="icon-bag"></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <div class="row container-cust">
+                <div class="col" style="padding-left: 0px;">
+                    <h5>Danh mục sản phẩm </h5>
+                    <p>Phòng khách</p>
+                    <p>Phòng làm việc</p>
+                    <p>Phòng ăn</p>
+                    <p>Phòng ngủ</p>
+                    <p>Phòng vệ sinh</p>
+                    <p>Đồ trang trí</p>
+                </div>
+                <div class="col">
+                    <h5>Dịch vụ khách hàng </h5>
+                    <p>Dịch vụ giao hàng</p>
+                    <p>Chính sách đổi trả</p>
+                    <p>Chính sách bảo hành</p>
+                    <p>Click và Nhận hàng</p>
+                    <p>QAQ - Câu hỏi thường gặp</p>
+                    <p>Hotline: +84 xxx xxx xxx</p>
+                </div>
+                <div class="col">
+                    <h5>Furnitiry là ai </h5>
+                    <p>Giới thiệu Furnitiry</p>
+                </div>
+                <div class="col">
+                    <h5>Liên hệ </h5>
+                    <p>Số 80 Trúc Khê, phường Láng </p>
+                    <p>Hạ, quận Đống Đa, TP. Hà Nội</p>
+                    <p>ĐT: +84 xxx xxx xxx</p>
+                    <p>Email: furnitiry@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function openOption(evt, nameOption) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(nameOption).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+
+        function changeimg(url,e) {
+			document.getElementById("img").src = url;
+			let nodes = document.getElementById("thumb_img");
+			let img_child = nodes.children;
+			for (i = 0; i < img_child.length; i++) {
+				img_child[i].classList.remove('active')
+			}
+			e.classList.add('active');
+
+			}
+        </script>
+  </body>
+<script type="text/javascript" src="./assets/js/main.js"></script>
+<script src="./assets/lib/zoom-master/jquery.zoom.js"></script>
+	<script>
+		// $(document).ready(function(){
+		// 	$('#ex1').zoom();
+		// });
+		function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+	</script>
+</html>
