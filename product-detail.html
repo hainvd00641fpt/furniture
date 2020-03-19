@@ -15,6 +15,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
@@ -24,8 +25,21 @@
     <!-- Style -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <style>
-        
-    </style>
+		.zoom {
+			display:inline-block;
+			position: relative;
+		}
+		.zoom:after {
+			content:'';
+			display:block; 
+			width:33px; 
+			height:33px; 
+			position:absolute; 
+			top:0;
+			right:0;
+			background:url(icon.png);
+		}
+	</style>
 </head>
 
 <body>
@@ -36,7 +50,7 @@
                     <img src="assets/img/logo.png" alt="logo" height="61px">
                 </a>
             </div>
-            <nav id="navbar-menu">
+            <nav id="navbar-menu" class="header-bot">
                 <ul class="nav">
                     <li><a href="index.html">Trang chủ</a></li>
                     <li><a href="about-us.html">Giới thiệu</a></li>
@@ -49,7 +63,7 @@
             <div class="header-end">
                 <ul class="nav">
                     <li><img src="./assets/img/icon/search.png" alt="icon-search"></li>
-                    <li><img src="./assets/img/icon/heart.png" alt="icon-heart"></li>
+                    <li><a href="./wishlist.html" title="My wishlist"><img src="./assets/img/icon/heart.png" alt="icon-heart"></a></li>
                     <li><img src="./assets/img/icon/bag.png" alt="icon-bag"></li>
                 </ul>
                 </div>
@@ -61,7 +75,7 @@
      <div class="header-category" style="margin-bottom:25px;">
         <div class="container-cust img-text-div">
            <h2>SẢN PHẨM</h2>
-           <p></p>
+           <h6></h6>
         </div>
    </div>
     <div class="pagination-product container-cust">
@@ -75,18 +89,26 @@
     <div class="main-content container-cust">
         <div class="row">
             <div class="col-9 product-detail-div">
-                <div class="img-small">
-                    <!-- <img src="https://via.placeholder.com/150" alt="">
-                    <img src="https://via.placeholder.com/150" alt=""> -->
+                <div class="img-small" id="thumb_img">
+                    <img class="active" src="./assets/img/home/bedroom1.jpg" onclick="changeimg('./assets/img/home/bedroom1.jpg',this);" style="margin-bottom: 15px;" alt="">
+                    <img src="./assets/img/home/bedroom2.jpg" onclick="changeimg('./assets/img/home/bedroom2.jpg',this);" alt="">
                 </div>
                 <div class="img-big">
+                    <span class='zoom' id='ex1'>
+                        <img id="img" src='./assets/img/home/bedroom1.jpg' width='420' height='420' alt='img product'/>
+                    </span>
                 </div>
                 <div class="info-product">
                     <h5>Product title goes here</h5>
                     <p class="price-div">120.000 VNĐ</p>
                     <p>Availability: In Stock</p>
                     <p style="width: 275px;">We believe that great design and quality is about solving problems, collaborating, and working with the finest materials and creators.</p>
-                    <button class="btn-add">Add to cart</button>
+                    <div class="qty">
+                        <span class="minus">-</span>
+                        <input type="number" class="count" name="qty" value="1">
+                        <span class="plus">+</span>
+                    </div>
+                    <button class="btn-add button1">Add to cart</button>
                     <p><b>SP123456789</b></p>
                     <p><b>Categories:</b> All Furniture, Chairs, Home Office, Kitchen & Dining, Living Room</p>
                     <p><b>Tags:</b> Accessories, Chair, Dining Chairs, Kitchen & Dining</p>
@@ -114,19 +136,22 @@
     <div class="description container-cust">
         <div class="tabs">
             <div class="tab-2">
-                <label for="tab2-1">Description</label>
+                <label for="tab2-1">Thông tin chi tiết</label>
                 <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
                 <div>
-                    <h4>Tab One</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas consequat id velit quis vestibulum. Nam id orci eu urna mollis porttitor. Nunc nisi ante, gravida at velit eu, aliquet sodales dui. Sed laoreet condimentum nisi a egestas.</p><p>Donec interdum ante ut enim consequat, quis varius nulla dapibus. Vivamus mollis fermentum augue a varius. Vestibulum in sapien at lectus gravida lobortis vulputate sed metus. Duis scelerisque justo et maximus efficitur. Donec eu eleifend quam. Curabitur aliquet commodo sapien eget vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum vel aliquet nunc, finibus posuere lorem. Suspendisse consectetur volutpat est ut ornare.</p>
+                    <p>- Kích thước: 1.4 x 2 m (Giá: 5.790.000đ) <br>
+                        - Kích thước: 1.6 x 2 m (Giá: 5.890.000đ) <br>
+                        - Kích thước: 1.4 x 2 m (Giá: 5.990.000đ) <br>
+                        - Chất liệu: Gỗ thông nhập khẩu Newzealand <br>
+                        - Màu sắc: Trắng phối gỗ <br>
+                        - Xuất xứ: Việt Nam - Hàng xuất khẩu</p>
                 </div>
             </div>
             <div class="tab-2">
-                <label for="tab2-2">Additional information</label>
+                <label for="tab2-2">Thông tin khác</label>
                 <input id="tab2-2" name="tabs-two" type="radio">
                 <div>
-                    <h4>Tab Two</h4>
-                    <p>Quisque sit amet turpis leo. Maecenas sed dolor mi. Pellentesque varius elit in neque ornare commodo ac non tellus. Mauris id iaculis quam. Donec eu felis quam. Morbi tristique lorem eget iaculis consectetur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean at tellus eget risus tempus ultrices. Nam condimentum nisi enim, scelerisque faucibus lectus sodales at.</p>
+                    <p>Nội dung đang được cập nhật ...</p>
                 </div>
             </div>
         </div>
@@ -162,11 +187,11 @@
                         <button class="btn-add">Add to cart</button>
                     </div>
                 </div>
+                <a href="#">Xem thêm >></a>
             </div>
         </div>
     </div>
     <!-- End Body -->
-    <div class="" style="height: 200px;"></div>
     <footer>
         <div class="footer-top">
             <ul class="nav container-cust">
@@ -226,8 +251,24 @@
         
         // Get the element with id="defaultOpen" and click on it
         document.getElementById("defaultOpen").click();
+
+        function changeimg(url,e) {
+			document.getElementById("img").src = url;
+			let nodes = document.getElementById("thumb_img");
+			let img_child = nodes.children;
+			for (i = 0; i < img_child.length; i++) {
+				img_child[i].classList.remove('active')
+			}
+			e.classList.add('active');
+
+			}
         </script>
   </body>
 <script type="text/javascript" src="./assets/js/main.js"></script>
-
+<script src="./assets/lib/zoom-master/jquery.zoom.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#ex1').zoom();
+		});
+	</script>
 </html>

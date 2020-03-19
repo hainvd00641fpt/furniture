@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>About us</title>
     <!-- Normalize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <!-- Bootstrap 4 -->
@@ -35,9 +35,15 @@
             </div>
             <nav id="navbar-menu" class="header-bot">
                 <ul class="nav">
-                    <li><a href="index.html" class="active">Trang chủ</a></li>
-                    <li><a href="about-us.html">Giới thiệu</a></li>
-                    <li><a href="product.html">Sản phẩm</a></li>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="about-us.html" class="active">Giới thiệu</a></li>
+                    <li class="dropdown"><a href="product.html">Sản phẩm
+                        <div class="dropdown-content">
+                            <a href="livingroom.html"><h5>Phòng khách</h5></a>
+                            <a href="bedroom.html"><h5>Phòng ngủ</h5></a>
+                            <a href="kitchen.html"><h5>Phòng Bếp</h5></a>
+                        </div>
+                    </a></li>
                     <li><a href="contact.html">Liên hệ</a></li>
                     <li><a href="service.html">Dịch vụ</a></li>
                     <li><a href="store.html">Cửa hàng</a></li>
@@ -47,7 +53,7 @@
                 <ul class="nav">
                     <li><img src="./assets/img/icon/search.png" alt="icon-search"></li>
                     <li><a href="./wishlist.html" title="My wishlist"><img src="./assets/img/icon/heart.png" alt="icon-heart"></a></li>
-                    <li><img src="./assets/img/icon/bag.png" alt="icon-bag"></li>
+                    <li><img src="./assets/img/icon/bag.png" alt="icon-bag" id="dropdownCart"></li>
                 </ul>
                 </div>
             </div>
@@ -55,12 +61,51 @@
     </header>
 
      <!-- Body -->
-     <div class="" style="height: 500px;">
-
+            </div>
+     <div class="img-header header-category">
+        <div class="container-cust">
+            <div id="cart">
+                <div class="cart-div">
+                    <div class="popup-cart">
+                        <div class="">
+                            <div class="item-product">
+                                <img src="./assets/img/home/bedroom1.jpg"alt="">
+                                <h5>Ten san pham</h5>
+                                <p><b>1</b> x 200.000 VNĐ</p>
+                                <i class="material-icons md-14">close</i>
+                            </div>
+                            <hr style="margin-top: 10px; margin-bottom: 10px;" />
+                            <div class="item-product">
+                                <img src="./assets/img/home/bedroom1.jpg"alt="">
+                                <h5>Ten san pham</h5>
+                                <p><b>1</b> x 200.000 VNĐ</p>
+                                <i class="material-icons md-14">close</i>
+                            </div>
+                            <hr style="margin-top: 10px; margin-bottom: 10px;" />
+                        </div>
+                        <div class="subtotal">
+                            <h5>Subtotal:</h5>
+                            <p>400.000 VNĐ</p>
+                        </div>
+                        <div class="btn-viewcart">
+                            <button>VIEW CART</button>
+                            <button>CHECKOUT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="container-cust img-text-div">
+            <h2>Giới thiệu</h2>
+            <h6></h6>
+         </div>
+    </div>
+    <div class="container-cust" style="margin-top: 30px;">
+        <h4>GIỚI THIỆU</h4>
+        <P>Thưa quí vị, <br> Trong suốt gần 5 năm phục vụ - giao lưu - gặp gỡ với khách hàng, đã có rất nhiều lần quí vị quan tâm đến tên gọi “Mew Furniture” với cấu trúc gợi sự thân thiện về môi trường từ và ý nghĩa của nó cùng một sự cảm tình ít nhiều dành cho tên gọi đó. <br> Không có tên gọi nào ngay từ khi nghĩ ra nó đã là hay cả. Nó chỉ gần gũi với mọi người một khi những dịch vụ và những Giá Trị mang lại cũng như tiếng vang của nó trong lòng người dùng, qua muôn vàn “ khó khăn, thử thách “ để đến một lúc nào đó nó có trong trí nhớ của nhiều người để mỗi khi lục tìm đến sản phẩm, dịch vụ gì đó người dùng Ưu Ái nghĩ đến tên đó trước trong muôn vàn những tên gọi khác cùng ngành hàng kinh doanh. Không ngoại lệ, tên Mew Furniture cũng vậy, ban đầu nó chỉ là một ý tưởng nhỏ “không giống ai” của chính chủ nhân nó thời khai sơn, tích thủy.</P>
     </div>
     <!-- End Body -->
     
-    <div class="" style="height: 500px;"></div>
     <footer>
         <div class="footer-top">
             <ul class="nav container-cust">
