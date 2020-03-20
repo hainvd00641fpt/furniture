@@ -35,19 +35,36 @@
             </div>
             <nav id="navbar-menu" class="header-bot">
                 <ul class="nav">
-                    <li><a href="index.html" class="active">Trang chủ</a></li>
-                    <li><a href="about-us.html">Giới thiệu</a></li>
-                    <li><a href="product.html">Sản phẩm</a></li>
-                    <li><a href="contact.html">Liên hệ</a></li>
-                    <li><a href="service.html">Dịch vụ</a></li>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <!-- <li><a href="about-us.html">Giới thiệu</a></li> -->
+                    <li class="dropdown"><a class="active" href="product.html">Sản phẩm
+                        <div class="dropdown-content">
+                            <a href="livingroom.html"><h5>Phòng Khách</h5></a>
+                            <a href="bedroom.html"><h5>Phòng Ngủ</h5></a>
+                            <a href="kitchen.html"><h5>Phòng Bếp</h5></a>
+                        </div>
+                    </a></li>
+                    <!-- <li><a href="contact.html">Liên hệ</a></li> -->
                     <li><a href="store.html">Cửa hàng</a></li>
+                    <li><a href="service.html">Dịch vụ</a></li>
                 </ul>
             </nav>
+            <div class="" style="width: 220px;"></div>
             <div class="header-end">
                 <ul class="nav">
-                    <li><img src="./assets/img/icon/search.png" alt="icon-search"></li>
-                    <li><a href="./wishlist.html" title="My wishlist"><img src="./assets/img/icon/heart.png" alt="icon-heart"></a></li>
-                    <li><a href="./cart.html" title="Cart"><img src="./assets/img/icon/bag.png" alt="icon-bag" id="dropdownCart"></a></li>
+                    <li><img title="Search" data-toggle="modal" data-target="#searchModal" src="./assets/img/icon/search.png" alt="icon-search"></li></li>
+                    <li>
+                        <a href="./wishlist.html" title="My wishlist">
+                            <img src="./assets/img/icon/heart.png" alt="icon-heart">
+                        </a>
+                        <span class="badge badge-danger">4</span>
+                    </li>
+                    <li>
+                        <a href="./cart.html" title="Cart">
+                            <img src="./assets/img/icon/bag.png" alt="icon-bag" id="dropdownCart">
+                        </a>
+                        <span class="badge badge-danger">2</span>
+                    </li>
                 </ul>
                 </div>
             </div>

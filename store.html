@@ -36,24 +36,35 @@
             <nav id="navbar-menu" class="header-bot">
                 <ul class="nav">
                     <li><a href="index.html">Trang chủ</a></li>
-                    <li><a href="about-us.html" class="active">Giới thiệu</a></li>
+                    <!-- <li><a href="about-us.html">Giới thiệu</a></li> -->
                     <li class="dropdown"><a href="product.html">Sản phẩm
                         <div class="dropdown-content">
-                            <a href="livingroom.html"><h5>Phòng khách</h5></a>
-                            <a href="bedroom.html"><h5>Phòng ngủ</h5></a>
+                            <a href="livingroom.html"><h5>Phòng Khách</h5></a>
+                            <a href="bedroom.html"><h5>Phòng Ngủ</h5></a>
                             <a href="kitchen.html"><h5>Phòng Bếp</h5></a>
                         </div>
                     </a></li>
-                    <li><a href="contact.html">Liên hệ</a></li>
+                    <!-- <li><a href="contact.html">Liên hệ</a></li> -->
+                    <li><a href="store.html"  class="active">Cửa hàng</a></li>
                     <li><a href="service.html">Dịch vụ</a></li>
-                    <li><a href="store.html">Cửa hàng</a></li>
                 </ul>
             </nav>
+            <div class="" style="width: 220px;"></div>
             <div class="header-end">
                 <ul class="nav">
-                    <li><img src="./assets/img/icon/search.png" alt="icon-search"></li>
-                    <li><a href="./wishlist.html" title="My wishlist"><img src="./assets/img/icon/heart.png" alt="icon-heart"></a></li>
-                    <li><a href="./cart.html" title="Cart"><img src="./assets/img/icon/bag.png" alt="icon-bag" id="dropdownCart"></a></li>
+                    <li><img title="Search" data-toggle="modal" data-target="#searchModal" src="./assets/img/icon/search.png" alt="icon-search"></li></li>
+                    <li>
+                        <a href="./wishlist.html" title="My wishlist">
+                            <img src="./assets/img/icon/heart.png" alt="icon-heart">
+                        </a>
+                        <span class="badge badge-danger">4</span>
+                    </li>
+                    <li>
+                        <a href="./cart.html" title="Cart">
+                            <img src="./assets/img/icon/bag.png" alt="icon-bag" id="dropdownCart">
+                        </a>
+                        <span class="badge badge-danger">2</span>
+                    </li>
                 </ul>
                 </div>
             </div>
@@ -62,7 +73,7 @@
 
      <!-- Body -->
      <div class="img-header header-category">
-        <div class="container-cust">
+        <div class="container-cust cart-hide">
             <div id="cart">
                 <div class="cart-div">
                     <div class="popup-cart">
@@ -95,13 +106,24 @@
             </div>
         </div>
          <div class="container-cust img-text-div">
-            <h2>Giới thiệu</h2>
+            <h2>Cửa hàng</h2>
             <h6></h6>
          </div>
     </div>
     <div class="container-cust" style="margin-top: 30px;">
         <h4>GIỚI THIỆU</h4>
-        <P>Thưa quí vị, <br> Trong suốt gần 5 năm phục vụ - giao lưu - gặp gỡ với khách hàng, đã có rất nhiều lần quí vị quan tâm đến tên gọi “Mew Furniture” với cấu trúc gợi sự thân thiện về môi trường từ và ý nghĩa của nó cùng một sự cảm tình ít nhiều dành cho tên gọi đó. <br> Không có tên gọi nào ngay từ khi nghĩ ra nó đã là hay cả. Nó chỉ gần gũi với mọi người một khi những dịch vụ và những Giá Trị mang lại cũng như tiếng vang của nó trong lòng người dùng, qua muôn vàn “ khó khăn, thử thách “ để đến một lúc nào đó nó có trong trí nhớ của nhiều người để mỗi khi lục tìm đến sản phẩm, dịch vụ gì đó người dùng Ưu Ái nghĩ đến tên đó trước trong muôn vàn những tên gọi khác cùng ngành hàng kinh doanh. Không ngoại lệ, tên Mew Furniture cũng vậy, ban đầu nó chỉ là một ý tưởng nhỏ “không giống ai” của chính chủ nhân nó thời khai sơn, tích thủy.</P>
+        <P>Thưa quí vị, <br> Trong suốt gần n năm phục vụ - giao lưu - gặp gỡ với khách hàng, 
+            đã có rất nhiều lần quí vị quan tâm đến tên gọi “Furniture abc” với cấu trúc gợi sự thân 
+            thiện về môi trường từ và ý nghĩa của nó cùng một sự cảm tình ít nhiều dành cho tên gọi đó. <br> 
+            Không có tên gọi nào ngay từ khi nghĩ ra nó đã là hay cả. Nó chỉ gần gũi với mọi người một khi 
+            những dịch vụ và những Giá Trị mang lại cũng như tiếng vang của nó trong lòng người dùng, qua muôn 
+            vàn “ khó khăn, thử thách “ để đến một lúc nào đó nó có trong trí nhớ của nhiều người để mỗi khi 
+            lục tìm đến sản phẩm, dịch vụ gì đó người dùng Ưu Ái nghĩ đến tên đó trước trong muôn vàn những 
+            tên gọi khác cùng ngành hàng kinh doanh. Không ngoại lệ, tên Mew Furniture cũng vậy, ban đầu nó 
+            chỉ là một ý tưởng nhỏ “không giống ai” của chính chủ nhân nó thời khai sơn, tích thủy.</P>
+    </div>
+    <div class="container-cust" style="margin-top: 30px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10532.689407389435!2d105.83211872481836!3d21.037964934644915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aba15ec15d17%3A0x620e85c2cfe14d4c!2zTMSDbmcgQ2jhu6cgdOG7i2NoIEjhu5MgQ2jDrSBNaW5o!5e0!3m2!1svi!2s!4v1584545722061!5m2!1svi!2s" width="1110" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
     <!-- End Body -->
     

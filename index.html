@@ -24,6 +24,7 @@
     <!-- Style -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/notify.js"></script>
 </head>
 
 <body>
@@ -40,8 +41,8 @@
                     <!-- <li><a href="about-us.html">Giới thiệu</a></li> -->
                     <li class="dropdown"><a href="product.html">Sản phẩm
                         <div class="dropdown-content">
-                            <a href="livingroom.html"><h5>Phòng khách</h5></a>
-                            <a href="bedroom.html"><h5>Phòng ngủ</h5></a>
+                            <a href="livingroom.html"><h5>Phòng Khách</h5></a>
+                            <a href="bedroom.html"><h5>Phòng Ngủ</h5></a>
                             <a href="kitchen.html"><h5>Phòng Bếp</h5></a>
                         </div>
                     </a></li>
@@ -53,16 +54,27 @@
             <div class="" style="width: 220px;"></div>
             <div class="header-end">
                 <ul class="nav">
-                    <li><img data-toggle="popover" title="" data-placement="bottom" data-content="search ..." src="./assets/img/icon/search.png" alt="icon-search"></li>
-                    <li><a href="./wishlist.html" title="My wishlist"><img src="./assets/img/icon/heart.png" alt="icon-heart"></a></li>
-                    <li><a href="./cart.html" title="Cart"><img src="./assets/img/icon/bag.png" alt="icon-bag" id="dropdownCart"></a></li>
+                    <li>
+                        <img title="Search" data-toggle="modal" data-target="#searchModal" src="./assets/img/icon/search.png" alt="icon-search"></li>
+                    <li>
+                        <a href="./wishlist.html" title="My wishlist">
+                            <img src="./assets/img/icon/heart.png" alt="icon-heart">
+                        </a>
+                        <span class="badge badge-danger">4</span>
+                    </li>
+                    <li>
+                        <a href="./cart.html" title="Cart">
+                            <img src="./assets/img/icon/bag.png" alt="icon-bag" id="dropdownCart">
+                        </a>
+                        <span class="badge badge-danger">2</span>
+                    </li>
                 </ul>
                 </div>
             </div>
         </div>
     </header>
     <!-- Body -->
-    <div class="img-header container-cust" style="max-width: 1500px;">
+    <div class="img-header">
         <div class="container-cust">
             <div id="cart">
                 <div class="cart-div">
@@ -84,7 +96,7 @@
                             <hr style="margin-top: 10px; margin-bottom: 10px;" />
                         </div>
                         <div class="subtotal">
-                            <h5>Subtotal:</h5>
+                            <h5>Tổng tiền:</h5>
                             <p>400.000 VNĐ</p>
                         </div>
                         <div class="btn-viewcart">
@@ -215,15 +227,15 @@
                         <div class="action">
                             <div class="action-icon" data-toggle="modal" data-target=".model-product-detail"><span class="material-icons">search</span></div>
                         </div>
-                        <div class="action add-wishlist">
+                        <div class="action add-wishlist" onclick="createAlert('','','Đã thêm sản phẩm vào danh mục yêu thích','warning',false,true,'pageMessages');">
                             <div class="action-icon"><span class="material-icons">favorite_border</span></div>
                         </div>
                       </div>
                   </div>
-                    <a href="./product-detail.html"><p class="name-div">Product title goes here</p></a>
+                    <a href="./product-detail.html"><p class="name-div">Ten san pham</p></a>
                     <p class="code-div">SP123456789</p>
                     <p class="price-div">120.000 VNĐ</p>
-                    <button class="btn-add">Add to cart</button>
+                    <button class="btn-add" onclick="createAlert('','Thông báo!','Thêm vào giỏ hàng thành công...','success',true,true,'pageMessages');">Thêm vào giỏ</button>
                 </div>
                 <div class="">
                     <div class="post">
@@ -232,15 +244,15 @@
                         <div class="action">
                             <div class="action-icon" data-toggle="modal" data-target=".model-product-detail"><span class="material-icons">search</span></div>
                         </div>
-                        <div class="action add-wishlist">
+                        <div class="action add-wishlist" onclick="createAlert('','','Đã thêm sản phẩm vào danh mục yêu thích','warning',false,true,'pageMessages');">
                             <div class="action-icon"><span class="material-icons">favorite_border</span></div>
                         </div>
                       </div>
                   </div>
-                    <a href="./product-detail.html"><p class="name-div">Product title goes here</p></a>
+                    <a href="./product-detail.html"><p class="name-div">Ten san pham</p></a>
                     <p class="code-div">SP123456789</p>
                     <p class="price-div">120.000 VNĐ</p>
-                    <button class="btn-add">Add to cart</button>
+                    <button class="btn-add" onclick="createAlert('','Thông báo!','Thêm vào giỏ hàng thành công...','success',true,true,'pageMessages');">Thêm vào giỏ</button>
                 </div>
             </div>
             <div class="col-4 col42">
@@ -251,15 +263,15 @@
                         <div class="action">
                             <div class="action-icon" data-toggle="modal" data-target=".model-product-detail"><span class="material-icons">search</span></div>
                         </div>
-                        <div class="action add-wishlist">
+                        <div class="action add-wishlist" onclick="createAlert('','','Đã thêm sản phẩm vào danh mục yêu thích','warning',false,true,'pageMessages');">
                             <div class="action-icon"><span class="material-icons">favorite_border</span></div>
                         </div>
                       </div>
                   </div>
-                    <a href="./product-detail.html"><p class="name-div">Product title goes here</p></a>
+                    <a href="./product-detail.html"><p class="name-div">Ten san pham</p></a>
                     <p class="code-div">SP123456789</p>
                     <p class="price-div">120.000 VNĐ</p>
-                    <button class="btn-add">Add to cart</button>
+                    <button class="btn-add" onclick="createAlert('','Thông báo!','Thêm vào giỏ hàng thành công...','success',true,true,'pageMessages');">Thêm vào giỏ</button>
                 </div>
                 <div class="">
                     <div class="post">
@@ -268,15 +280,15 @@
                         <div class="action">
                             <div class="action-icon" data-toggle="modal" data-target=".model-product-detail"><span class="material-icons">search</span></div>
                         </div>
-                        <div class="action add-wishlist">
+                        <div class="action add-wishlist" onclick="createAlert('','','Đã thêm sản phẩm vào danh mục yêu thích','warning',false,true,'pageMessages');">
                             <div class="action-icon"><span class="material-icons">favorite_border</span></div>
                         </div>
                       </div>
                   </div>
-                    <a href="./product-detail.html"><p class="name-div">Product title goes here</p></a>
+                    <a href="./product-detail.html"><p class="name-div">Ten san pham</p></a>
                     <p class="code-div">SP123456789</p>
                     <p class="price-div">120.000 VNĐ</p>
-                    <button class="btn-add">Add to cart</button>
+                    <button class="btn-add" onclick="createAlert('','Thông báo!','Thêm vào giỏ hàng thành công...','success',true,true,'pageMessages');">Thêm vào giỏ</button>
                 </div>
             </div>
             <div class="col-4 col43">
@@ -287,15 +299,15 @@
                         <div class="action">
                             <div class="action-icon" data-toggle="modal" data-target=".model-product-detail"><span class="material-icons">search</span></div>
                         </div>
-                        <div class="action add-wishlist">
+                        <div class="action add-wishlist" onclick="createAlert('','','Đã thêm sản phẩm vào danh mục yêu thích','warning',false,true,'pageMessages');">
                             <div class="action-icon"><span class="material-icons">favorite_border</span></div>
                         </div>
                       </div>
                   </div>
-                    <a href="./product-detail.html"><p class="name-div">Product title goes here</p></a>
+                    <a href="./product-detail.html"><p class="name-div">Ten san pham</p></a>
                     <p class="code-div">SP123456789</p>
                     <p class="price-div">120.000 VNĐ</p>
-                    <button class="btn-add">Add to cart</button>
+                    <button class="btn-add" onclick="createAlert('','Thông báo!','Thêm vào giỏ hàng thành công...','success',true,true,'pageMessages');">Thêm vào giỏ</button>
                 </div>
                 <div class="">
                     <div class="post">
@@ -304,15 +316,15 @@
                         <div class="action">
                             <div class="action-icon" data-toggle="modal" data-target=".model-product-detail"><span class="material-icons">search</span></div>
                         </div>
-                        <div class="action add-wishlist">
+                        <div class="action add-wishlist" onclick="createAlert('','','Đã thêm sản phẩm vào danh mục yêu thích','warning',false,true,'pageMessages');">
                             <div class="action-icon"><span class="material-icons">favorite_border</span></div>
                         </div>
                       </div>
                   </div>
-                    <a href="./product-detail.html"><p class="name-div">Product title goes here</p></a>
+                    <a href="./product-detail.html"><p class="name-div">Ten san pham</p></a>
                     <p class="code-div">SP123456789</p>
                     <p class="price-div">120.000 VNĐ</p>
-                    <button class="btn-add">Add to cart</button>
+                    <button class="btn-add" onclick="createAlert('','Thông báo!','Thêm vào giỏ hàng thành công...','success',true,true,'pageMessages');">Thêm vào giỏ</button>
                 </div>
             </div>
         </div>
@@ -333,6 +345,7 @@
             <button class="btn">ĐĂNG KÍ</button>
         </div>
     </div>
+    <div id="pageMessages"></div>
     <!-- End Body -->
     <div class="modal fade model-product-detail" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -351,6 +364,27 @@
         </div>
     </div>
 
+    <!-- modal search -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Tìm kiếm</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Tìm kiếm..." aria-label="Tìm kiếm..." aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Search</button>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      </div>
     <footer>
         <div class="footer-top">
             <ul class="nav container-cust">
@@ -395,7 +429,6 @@
     </footer>
     <script>
         $(document).ready(function(){
-            $('[data-toggle="popover"]').popover();   
             $('#cart').css("right", $('.container-cust').css("margin-right"))
         });
     </script>

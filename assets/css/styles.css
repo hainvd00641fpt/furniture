@@ -81,6 +81,17 @@ hr {
     transition: .1s;
 }
 
+.header-end li{
+    position: relative;
+}
+
+.header-end span{
+    position: absolute;
+    left: 13px;
+    top: 0px;
+    border-radius: 10px;
+}
+
  a.active {
     border-bottom: 4px solid;
     padding-bottom: 10px;
@@ -1353,6 +1364,28 @@ position: absolute;
 top: 0;
 }
 
+.img-connect-page {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-connect-page:hover img {
+    transform: scale(1.2);
+    transition: .3s;
+}
+
+.img-connect-page h4{
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 500;
+    color: #000000;
+    border-bottom: 1px solid;
+}
+
+
 /* footer */
 footer .footer-top {
     height: 98px;
@@ -1390,7 +1423,24 @@ footer p {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.modal-dialog {
-    max-width: 700px;
-    margin: 1.75rem auto;
+.cart-hide {
+    position: relative;
 }
+
+#pageMessages {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 30%;
+  }
+  
+  .alert {
+    position: relative;
+  }
+  
+  .alert .close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 1em;
+  }
