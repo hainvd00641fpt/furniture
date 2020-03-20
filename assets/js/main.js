@@ -31,3 +31,20 @@ $('#dropdownCart').mouseenter(function(){
         });
  });
 
+ window.onscroll = function() {myFunction()};
+
+ function myFunction() {
+    if (window.pageYOffset > 20) {
+      $('.headerIndex').css('background-color','#fff')
+      $('.headerIndex').css('box-shadow','0px 4px 4px rgba(0, 0, 0, 0.25)')
+      $('.header').css('height','61px')
+      $('.header .navbar-main').css('padding-top','0px')
+      $('.header .navbar-main').css('padding-bottom','0px')
+    } else {
+      $('.headerIndex').css('background-color','')
+      $('.headerIndex').css('box-shadow','')
+      $('.header').css('height','')
+      $('.header .navbar-main').css('padding-top','')
+      $('.header .navbar-main').css('padding-bottom','')
+    }
+ }
