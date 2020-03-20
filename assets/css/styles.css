@@ -1277,7 +1277,7 @@ select:focus {
     right:0;
     background:url(icon.png);
 }
-.modal {
+.cus-modal {
 display: none;
 position: fixed;
 z-index: 1;
@@ -1291,7 +1291,7 @@ background-color: rgba(0, 0, 0, 0.9);
 }
 
 /* Modal Content */
-.modal-content {
+.cus-modal-content {
 position: relative;
 background-color: #fefefe;
 margin: auto;

@@ -259,9 +259,9 @@
         </div>
     </div>
     <!-- modal -->
-    <div id="myModal" class="modal">
+    <div id="myModal" class="modal cus-modal">
         <span class="close cursor" onclick="closeModal()">&times;</span>
-        <div class="modal-content">
+        <div class="modal-content cus-modal-content">
             <div class="mySlides">
                 <div class="numbertext">1 / 2</div>
                 <img src="./assets/img/home/bedroom1.jpg" style="width:100%">
@@ -359,7 +359,7 @@
         function changeimg(url,e) {
 			document.getElementById("img").src = url;
 			let nodes = document.getElementById("thumb_img");
-			let img_child = nodes.children;
+			let modalimg_child = nodes.children;
 			for (i = 0; i < img_child.length; i++) {
 				img_child[i].classList.remove('active')
 			}
