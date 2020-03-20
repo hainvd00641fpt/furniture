@@ -25,20 +25,7 @@
     <!-- Style -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <style>
-		.zoom {
-			display:inline-block;
-			position: relative;
-		}
-		.zoom:after {
-			content:'';
-			display:block; 
-			width:33px; 
-			height:33px; 
-			position:absolute; 
-			top:0;
-			right:0;
-			background:url(icon.png);
-		}
+
 	</style>
 </head>
 
@@ -126,7 +113,7 @@
                     <img src="./assets/img/home/bedroom2.jpg" onclick="changeimg('./assets/img/home/bedroom2.jpg',this);" alt="">
                 </div>
                 <div class="img-big">
-                    <span class='zoom' id='ex1'>
+                    <span class='zoom' id='ex1' onclick="openModal();">
                         <img id="img" src='./assets/img/home/bedroom1.jpg' width='420' height='420' alt='img product'/>
                     </span>
                 </div>
@@ -223,6 +210,22 @@
             </div>
         </div>
     </div>
+    <!-- modal -->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <div class="mySlides">
+                <div class="numbertext">1 / 2</div>
+                <img src="./assets/img/home/bedroom1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">2 / 2</div>
+                <img src="./assets/img/home/bedroom2.jpg" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
     <!-- End Body -->
     <footer>
         <div class="footer-top">
@@ -266,7 +269,14 @@
             </div>
         </div>
     </footer>
-    <script>
+  </body>
+<script type="text/javascript" src="./assets/js/main.js"></script>
+<script src="./assets/lib/zoom-master/jquery.zoom.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#ex1').zoom();
+		});
+
         function openOption(evt, nameOption) {
           var i, tabcontent, tablinks;
           tabcontent = document.getElementsByClassName("tabcontent");
@@ -280,9 +290,6 @@
           document.getElementById(nameOption).style.display = "block";
           evt.currentTarget.className += " active";
         }
-        
-        // Get the element with id="defaultOpen" and click on it
-        document.getElementById("defaultOpen").click();
 
         function changeimg(url,e) {
 			document.getElementById("img").src = url;
@@ -294,13 +301,5 @@
 			e.classList.add('active');
 
 			}
-        </script>
-  </body>
-<script type="text/javascript" src="./assets/js/main.js"></script>
-<script src="./assets/lib/zoom-master/jquery.zoom.js"></script>
-	<script>
-		$(document).ready(function(){
-			$('#ex1').zoom();
-		});
-	</script>
+    </script>
 </html>
