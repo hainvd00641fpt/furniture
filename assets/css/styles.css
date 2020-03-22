@@ -363,20 +363,38 @@ transform: scale(1.08);
     position: absolute;
     left: 0px;
     top: 0px;
-    width: 255px;
+    width: 240px;
     height: 460px;
+    overflow: hidden;
+}
+
+.space-around .div-2 .div-21:hover img {
+    transform: scale(1.1);
+    transition: .3s;
 }
 
 .space-around .div-2 .div-22 {
     position: absolute;
     right: 0px;
     top: 0px;
+    overflow: hidden;
+}
+
+.space-around .div-2 .div-22:hover img {
+    transform: scale(1.1);
+    transition: .3s;
 }
 
 .space-around .div-2 .div-23 {
     position: absolute;
     right: 0px;
     bottom: 0px;
+    overflow: hidden;
+}
+
+.space-around .div-2 .div-23:hover img {
+    transform: scale(1.1);
+    transition: .3s;
 }
 
 .space-around .div-3 {
@@ -407,18 +425,28 @@ transform: scale(1.08);
 .space-around .div-4 .div-41 {
     position: absolute;
     top: 0px;
+    overflow: hidden;
+}
+
+.space-around .div-4 .div-41:hover img, 
+.space-around .div-4 .div-42:hover img, 
+.space-around .div-4 .div-43:hover img {
+    transform: scale(1.1);
+    transition: .3s;
 }
 
 .space-around .div-4 .div-42 {
     position: absolute;
     bottom: 0px;
     left: 0px;
+    overflow: hidden;
 }
 
 .space-around .div-4 .div-43 {
     position: absolute;
     bottom: 0px;
     right: -15px;
+    overflow: hidden;
 }
 
 .space-around .div-5 {
@@ -451,18 +479,30 @@ transform: scale(1.08);
     position: absolute;
     left: 0px;
     top: 0px;
+    overflow: hidden;
+    width: 255px;
+}
+
+.space-around .div-6 .div-61:hover img, 
+.space-around .div-6 .div-62:hover img,
+.space-around .div-6 .div-63:hover img {
+    transform: scale(1.1);
+    /* transition: .3s; */
+    transition: all .2s ease-in-out;
 }
 
 .space-around .div-6 .div-62 {
     position: absolute;
     right: -15px;
     top: 0px;
+    overflow: hidden;
 }
 
 .space-around .div-6 .div-63 {
     position: absolute;
     left: 0px;
     bottom: 0px;
+    overflow: hidden;
 }
 
 .space-around .title-div {
