@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Document - Furnitury</title>
     <!-- Normalize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <!-- Bootstrap 4 -->
@@ -37,46 +37,116 @@
                 <ul class="nav">
                     <li><a href="index.html">Trang chủ</a></li>
                     <!-- <li><a href="about-us.html">Giới thiệu</a></li> -->
-                    <li class="dropdown"><a class="active" href="product.html">Sản phẩm
-                        <div class="dropdown-content">
-                            <a href="livingroom.html"><h5>Phòng Khách</h5></a>
-                            <a href="bedroom.html"><h5>Phòng Ngủ</h5></a>
-                            <a href="kitchen.html"><h5>Phòng Bếp</h5></a>
-                        </div>
-                    </a></li>
+                    <li id="menu-product"><a class="active" href="product.html">Sản phẩm
+                        </a></li>
                     <!-- <li><a href="contact.html">Liên hệ</a></li> -->
                     <li><a href="store.html">Cửa hàng</a></li>
-                    <li><a href="service.html">Dịch vụ</a></li>
+                    <li class="dropdown">
+                        <a href="#">Dịch vụ
+                            <div class="dropdown-content">
+                                <a href="service.html">
+                                    <h5>Thiết Kế Nội Thất</h5>
+                                </a>
+                                <a href="support.html">
+                                    <h5>Chăm Sóc Khách Hàng</h5>
+                                </a>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <div class="" style="width: 220px;"></div>
             <div class="header-end">
                 <ul class="nav">
-                    <li><img title="Search" data-toggle="modal" data-target="#searchModal" src="./assets/img/icon/search.png" alt="icon-search"></li></li>
+                    <li data-toggle="modal" data-target="#searchModal"><img title="Search" data-toggle="modal"
+                            data-target="#searchModal" src="./assets/img/icon/search.svg" alt="icon-search"></li>
+                    </li>
                     <li>
                         <a href="./wishlist.html" title="My wishlist">
-                            <img src="./assets/img/icon/heart.png" alt="icon-heart">
+                            <img src="./assets/img/icon/heart.svg" alt="icon-heart">
                         </a>
                         <span class="badge badge-danger">4</span>
                     </li>
                     <li>
                         <a href="./cart.html" title="Cart">
-                            <img src="./assets/img/icon/bag.png" alt="icon-bag" id="dropdownCart">
+                            <img src="./assets/img/icon/bag.svg" alt="icon-bag" id="dropdownCart">
                         </a>
                         <span class="badge badge-danger">2</span>
                     </li>
                 </ul>
-                </div>
             </div>
         </div>
     </header>
+    <div class="dropdown-fullwidth" id="dropdown-product">
+        <div class="row" style="padding: 30px;">
+            <div class="col">
+                <div class="submenu-header">
+                    <a href="livingroom.html">Phòng khách</a>
+                </div>
+                <div class="submenu-item">
+                    <div><a href="livingroom-sofa.html">Sofa</a></div>
+                    <div><a href="livingroom-table.html">Bàn cafe</a></div>
+                    <div><a href="livingroom-couch.html.html">Ghế bành</a></div>
+                    <div><a href="livingroom-shelves.html.html">Kệ TV</a></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="submenu-header">
+                    <a href="bedroom.html">Phòng ngủ</a>
+                </div>
+                <div class="submenu-item">
+                    <div><a href="bedroom-bed.html">Giường</a></div>
+                    <div><a href="bedroom-wardrobe.html">Tủ</a></div>
+                    <div><a href="bedroom-makeup-table.html">Bàn trang điểm</a></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="submenu-header">
+                    <a href="kitchen.html">Phòng ăn</a>
+                </div>
+                <div class="submenu-item">
+                    <div><a href="kitchen-table.html">Bàn ăn</a></div>
+                    <div><a href="kitchen-cabinet.html">Tủ bếp</a></div>
+                    <div><a href="kitchen-chair.html">Ghế</a></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="submenu-header">
+                    <a href="bathroom.html">Phòng tắm</a>
+                </div>
+                <div class="submenu-item">
+                    <div><a href="bathroom-curtain.html">Rèm</a></div>
+                    <div><a href="bathroom-towel.html">Khăn tắm</a></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="submenu-header">
+                    <a href="workroom.html">Phòng làm việc</a>
+                </div>
+                <div class="submenu-item">
+                    <div><a href="workroom-table.html">Bàn</a></div>
+                    <div><a href="workroom-shelves.html">Kệ sách</a></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="submenu-header">
+                    <a href="otherroom.html">Đồ trang trí</a>
+                </div>
+                <div class="submenu-item">
+                    <div><a href="otherroom-mirror.html">Gương</a></div>
+                    <div><a href="otherroom-wallpaper.html">Giấy dán tường</a></div>
+                    <div><a href="otherroom-flower.html">Hoa</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-     <!-- Body -->
-     <div class="" style="height: 500px;">
+    <!-- Body -->
+    <div class="" style="height: 500px;">
 
     </div>
     <!-- End Body -->
-    
+
     <div class="" style="height: 500px;"></div>
     <footer>
         <div class="footer-top">
@@ -120,7 +190,7 @@
             </div>
         </div>
     </footer>
-  </body>
+</body>
 <script type="text/javascript" src="./assets/js/main.js"></script>
 
 </html>

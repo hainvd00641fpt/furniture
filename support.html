@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Giỏ Hàng - Furnitury</title>
+    <title>Chăm Sóc Khách Hàng - Furnitury</title>
     <!-- Normalize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <!-- Bootstrap 4 -->
@@ -37,7 +37,7 @@
                 <ul class="nav">
                     <li><a href="index.html">Trang chủ</a></li>
                     <!-- <li><a href="about-us.html">Giới thiệu</a></li> -->
-                    <li id="menu-product"><a href="product.html">Sản phẩm
+                    <li id="menu-product"><a class="active" href="product.html">Sản phẩm
                         </a></li>
                     <!-- <li><a href="contact.html">Liên hệ</a></li> -->
                     <li><a href="store.html">Cửa hàng</a></li>
@@ -142,7 +142,7 @@
     </div>
 
     <!-- Body -->
-    <div class="img-header header-category">
+    <div class="img-header" style="padding-top: 100px;">
         <div class="container-cust cart-hide">
             <div id="cart">
                 <div class="cart-div">
@@ -175,85 +175,41 @@
                 </div>
             </div>
         </div>
-        <div class="container-cust img-text-div">
-            <h2>Giỏ hàng</h2>
-            <h6></h6>
-        </div>
     </div>
-    <div class="pagination-product container-cust">
-        <ul class="nav">
-            <li>Trang chủ ></li>
-            <li>Giỏ hàng </li>
-        </ul>
-    </div>
-    <div class="container-cust">
-        <div class="wishlist-div">
-            <div class="wishitem">
-                <i class="material-icons">close</i>
-                <img src="./assets/img/home/bedroom1.jpg" width="80px" height="80px" alt="">
-                <h4>Ten san pham</h4>
-                <p>200.000 VNĐ</p>
-                <div class="qty">
-                    <span class="minus">-</span>
-                    <input type="number" class="count" name="qty" value="1">
-                    <span class="plus">+</span>
-                </div>
-                <p>200.000 VNĐ</p>
+    <div class="container-cust" style="margin-top: 57px; margin-bottom: 73px;">
+        <h1 class="header-service" style="padding-bottom: 68px;">Chăm sóc khách hàng</h1>
+        <div class="row">
+            <div class="col">
+                <div class="subheader-service">Sản phẩm</div>
             </div>
-            <hr>
-            <div class="wishitem">
-                <i class="material-icons">close</i>
-                <img src="./assets/img/home/bedroom1.jpg" width="80px" height="80px" alt="">
-                <h4>Ten san pham</h4>
-                <p>200.000 VNĐ</p>
-                <div class="qty">
-                    <span class="minus">-</span>
-                    <input type="number" class="count" name="qty" value="1">
-                    <span class="plus">+</span>
-                </div>
-                <p>200.000 VNĐ</p>
+            <div class="col">
+                <div class="subheader-service">Khách hàng</div>
             </div>
-            <hr>
-            <div class="wishitem">
-                <i class="material-icons">close</i>
-                <img src="./assets/img/home/bedroom1.jpg" width="80px" height="80px" alt="">
-                <h4>Ten san pham</h4>
-                <p>200.000 VNĐ</p>
-                <div class="qty">
-                    <span class="minus">-</span>
-                    <input type="number" class="count" name="qty" value="1">
-                    <span class="plus">+</span>
-                </div>
-                <p>200.000 VNĐ</p>
-            </div>
-            <hr>
-            <div class="wishitem">
-                <i class="material-icons">close</i>
-                <img src="./assets/img/home/bedroom1.jpg" width="80px" height="80px" alt="">
-                <h4>Ten san pham</h4>
-                <p>200.000 VNĐ</p>
-                <div class="qty">
-                    <span class="minus">-</span>
-                    <input type="number" class="count" name="qty" value="1">
-                    <span class="plus">+</span>
-                </div>
-                <p>200.000 VNĐ</p>
-            </div>
-            <hr>
-            <div class="code-btn-div">
-                <div class="code-div">
-                    <input type="text" placeholder="Mã giảm giá">
-                    <button class="btn">Áp dụng</button>
-                </div>
-                <!-- <button class="btn">Update cart</button> -->
+            <div class="col">
+                <div class="subheader-service">Liên hệ</div>
             </div>
         </div>
-        <hr>
-        <div class="total-price">
-            <a href="./product.html"><button class="btn">Thanh toán</button></a>
-            <div class="total-price-div">
-                <h5><b>Tổng:</b> &nbsp;</h5>
-                <h5>800.000 VNĐ</h5>
+        <div class="row design-furniture">
+            <div class="col">
+                <ul>
+                    <li>Dịch vụ giao hàng</li>
+                    <li>Miễn phí đổi trả trong 15 ngày</li>
+                    <li>Bảo hành trọn đời</li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul>
+                    <li>Thẻ tích điểm</li>
+                    <li>Hỗ trợ mua trả góp</li>
+                    <li>Tư vấn, giải pháp 24/24</li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul>
+                    <li>Furnitury@gmail.com</li>
+                    <li>Hotline: 0379379811</li>
+                    <li>CSKH: 02438517103</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -275,77 +231,7 @@
         </div>
     </div>
     <!-- End Body -->
-    <div class="modal fade model-product-detail" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg" style="max-width: 1110px;">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Sản phẩm</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
 
-                    <div class="main-content container-cust">
-                        <div class="row">
-                            <div class="col-9 product-detail-div">
-                                <div class="img-small" id="thumb_img">
-                                    <img class="active" src="./assets/img/home/bedroom1.jpg"
-                                        onclick="changeimg('./assets/img/home/bedroom1.jpg',this);"
-                                        style="margin-bottom: 15px;" alt="">
-                                    <img src="./assets/img/home/bedroom2.jpg"
-                                        onclick="changeimg('./assets/img/home/bedroom2.jpg',this);" alt="">
-                                </div>
-                                <div class="img-big">
-                                    <span class='zoom' id='ex1' onclick="openModal();">
-                                        <img id="img" src='./assets/img/home/bedroom1.jpg' width='420' height='420'
-                                            alt='img product' />
-                                    </span>
-                                </div>
-                                <div class="info-product">
-                                    <h5>Ten san pham</h5>
-                                    <p class="price-div">120.000 VNĐ</p>
-                                    <p>Tình trạng: Còn hàng</p>
-                                    <p style="width: 275px;">Chúng tôi tin rằng thiết kế tuyệt vời và chất lượng là giải
-                                        quyết các vấn đề, hợp tác và làm việc với các vật liệu và nhà sáng tạo tốt nhất.
-                                    </p>
-                                    <div class="qty">
-                                        <span class="minus">-</span>
-                                        <input type="number" class="count" name="qty" value="1">
-                                        <span class="plus">+</span>
-                                    </div>
-                                    <button class="btn-add button1"
-                                        onclick="createAlert('','Thông báo!','Thêm vào giỏ hàng hàng thành công...','success',true,true,'pageMessages');">Thêm vào giỏ hàng</button>
-                                    <p><b>SP123456789</b></p>
-                                    <p><b>Thể loại:</b> Tất cả nội thất, Ghế, Home Office, Nhà bếp, Phòng khách</p>
-                                    <p><b>Thẻ:</b> Phụ kiện, Ghế, Ghế ăn, Đồ dụng nhà bếp</p>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="shop-sidebar shop-sidebar-1">
-                                    <img src="./assets/img/icon/heart.svg" alt="">
-                                    <h4>Bảo hành lên đến 10 năm</h4>
-                                    <p>Chất lượng là trên hết và các sản phẩm của chúng tôi được thiết kế bền đẹp.</p>
-                                </div>
-                                <div class="shop-sidebar shop-sidebar-2">
-                                    <img src="./assets/img/icon/heart.svg" alt="">
-                                    <h4>Hoàn trả trong 7 ngày</h4>
-                                    <p>Không phù hợp? Đừng lo lắng. Chúng tôi sẽ sắp xếp nhận và hoàn trả đầy đủ trong
-                                        vòng 7 ngày.</p>
-                                </div>
-                                <div class="shop-sidebar shop-sidebar-3">
-                                    <img src="./assets/img/icon/heart.svg" alt="">
-                                    <h4>Thông tin giao hàng</h4>
-                                    <p>Giao hàng trong vòng 2-10 ngày, tùy thuộc vào địa điểm của bạn.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <footer>
         <div class="footer-top">
             <ul class="nav container-cust">
@@ -389,7 +275,6 @@
         </div>
     </footer>
 </body>
-<script src="./assets/lib/zoom-master/jquery.zoom.js"></script>
 <script type="text/javascript" src="./assets/js/main.js"></script>
 
 </html>

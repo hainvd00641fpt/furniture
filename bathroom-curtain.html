@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Giỏ Hàng - Furnitury</title>
+    <title>Rèm - Furnitury</title>
     <!-- Normalize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <!-- Bootstrap 4 -->
@@ -23,6 +23,7 @@
         crossorigin="anonymous"></script>
     <!-- Style -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="./assets/js/notify.js"></script>
 </head>
 
 <body>
@@ -37,7 +38,7 @@
                 <ul class="nav">
                     <li><a href="index.html">Trang chủ</a></li>
                     <!-- <li><a href="about-us.html">Giới thiệu</a></li> -->
-                    <li id="menu-product"><a href="product.html">Sản phẩm
+                    <li id="menu-product"><a class="active" href="product.html">Sản phẩm
                         </a></li>
                     <!-- <li><a href="contact.html">Liên hệ</a></li> -->
                     <li><a href="store.html">Cửa hàng</a></li>
@@ -142,9 +143,9 @@
     </div>
 
     <!-- Body -->
-    <div class="img-header header-category">
+    <div class="img-header" style="padding-top: 58px;">
         <div class="container-cust cart-hide">
-            <div id="cart">
+            <div id="cart" style="top: -10px;">
                 <div class="cart-div">
                     <div class="popup-cart">
                         <div class="">
@@ -175,88 +176,257 @@
                 </div>
             </div>
         </div>
-        <div class="container-cust img-text-div">
-            <h2>Giỏ hàng</h2>
-            <h6></h6>
-        </div>
     </div>
-    <div class="pagination-product container-cust">
+    <div class="container-cust header-subcategory">
+        Rèm
+    </div>
+    <div class="filte container-cust">
         <ul class="nav">
-            <li>Trang chủ ></li>
-            <li>Giỏ hàng </li>
+            <li>
+                <p>Giá cao</p>
+            </li>
+            <li>
+                <p>Giá thấp</p>
+            </li>
+            <li>
+                <p>Bán chạy</p>
+            </li>
+            <li>
+                <p>Mới</p>
+            </li>
+            <li><button class="btn-add">Lọc</button></li>
         </ul>
     </div>
-    <div class="container-cust">
-        <div class="wishlist-div">
-            <div class="wishitem">
-                <i class="material-icons">close</i>
-                <img src="./assets/img/home/bedroom1.jpg" width="80px" height="80px" alt="">
-                <h4>Ten san pham</h4>
-                <p>200.000 VNĐ</p>
-                <div class="qty">
-                    <span class="minus">-</span>
-                    <input type="number" class="count" name="qty" value="1">
-                    <span class="plus">+</span>
+    <hr style="margin-top: 78px; margin-bottom: 91px;" />
+    <div class="product-category">
+        <div class="product-div container-cust">
+            <div class="row" style="margin-left: 0">
+                <div class="col-4 col41">
+                    <div class="">
+                        <div class="post">
+                            <a href="product-detail.html"><img src="./assets/img/home/product4.png"
+                                    alt="img product"></a>
+                            <div class="post-s">
+                                <div class="action">
+                                    <div class="action-icon" data-toggle="modal" data-target=".model-product-detail">
+                                        <span class="material-icons">search</span></div>
+                                </div>
+                                <div class="action add-wishlist"
+                                    onclick="createAlert('','','Đã thêm sản phẩm vào danh mục yêu thích','warning',false,true,'pageMessages');">
+                                    <div class="action-icon"><span class="material-icons">favorite_border</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="./product-detail.html">
+                            <p class="name-div">Ten san pham</p>
+                        </a>
+                        <p class="code-div">SP123456789</p>
+                        <p class="price-div">120.000 VNĐ</p>
+                        <button class="btn-add"
+                            onclick="createAlert('','Thông báo!','Thêm vào giỏ hàng hàng thành công...','success',true,true,'pageMessages');">Thêm
+                            vào giỏ hàng</button>
+                    </div>
+                    <div class="">
+                        <div class="post">
+                            <a href="product-detail.html"><img src="./assets/img/home/product4.png"
+                                    alt="img product"></a>
+                            <div class="post-s">
+                                <div class="action">
+                                    <div class="action-icon" data-toggle="modal" data-target=".model-product-detail">
+                                        <span class="material-icons">search</span></div>
+                                </div>
+                                <div class="action add-wishlist"
+                                    onclick="createAlert('','','Đã thêm sản phẩm vào danh mục yêu thích','warning',false,true,'pageMessages');">
+                                    <div class="action-icon"><span class="material-icons">favorite_border</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="./product-detail.html">
+                            <p class="name-div">Ten san pham</p>
+                        </a>
+                        <p class="code-div">SP123456789</p>
+                        <p class="price-div">120.000 VNĐ</p>
+                        <button class="btn-add"
+                            onclick="createAlert('','Thông báo!','Thêm vào giỏ hàng hàng thành công...','success',true,true,'pageMessages');">Thêm
+                            vào giỏ hàng</button>
+                    </div>
+                    <div class="">
+                        <div class="post">
+                            <a href="product-detail.html"><img src="./assets/img/home/product4.png"
+                                    alt="img product"></a>
+                            <div class="post-s">
+                                <div class="action">
+                                    <div class="action-icon" data-toggle="modal" data-target=".model-product-detail">
+                                        <span class="material-icons">search</span></div>
+                                </div>
+                                <div class="action add-wishlist"
+                                    onclick="createAlert('','','Đã thêm sản phẩm vào danh mục yêu thích','warning',false,true,'pageMessages');">
+                                    <div class="action-icon"><span class="material-icons">favorite_border</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="./product-detail.html">
+                            <p class="name-div">Ten san pham</p>
+                        </a>
+                        <p class="code-div">SP123456789</p>
+                        <p class="price-div">120.000 VNĐ</p>
+                        <button class="btn-add"
+                            onclick="createAlert('','Thông báo!','Thêm vào giỏ hàng hàng thành công...','success',true,true,'pageMessages');">Thêm
+                            vào giỏ hàng</button>
+                    </div>
                 </div>
-                <p>200.000 VNĐ</p>
-            </div>
-            <hr>
-            <div class="wishitem">
-                <i class="material-icons">close</i>
-                <img src="./assets/img/home/bedroom1.jpg" width="80px" height="80px" alt="">
-                <h4>Ten san pham</h4>
-                <p>200.000 VNĐ</p>
-                <div class="qty">
-                    <span class="minus">-</span>
-                    <input type="number" class="count" name="qty" value="1">
-                    <span class="plus">+</span>
+                <div class="col-4 col42">
+                    <div class="">
+                        <div class="post">
+                            <a href="product-detail.html"><img src="./assets/img/home/product5.png"
+                                    alt="img product"></a>
+                            <div class="post-s">
+                                <div class="action">
+                                    <div class="action-icon" data-toggle="modal" data-target=".model-product-detail">
+                                        <span class="material-icons">search</span></div>
+                                </div>
+                                <div class="action add-wishlist"
+                                    onclick="createAlert('','','Đã thêm sản phẩm vào danh mục yêu thích','warning',false,true,'pageMessages');">
+                                    <div class="action-icon"><span class="material-icons">favorite_border</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="./product-detail.html">
+                            <p class="name-div">Ten san pham</p>
+                        </a>
+                        <p class="code-div">SP123456789</p>
+                        <p class="price-div">120.000 VNĐ</p>
+                        <button class="btn-add"
+                            onclick="createAlert('','Thông báo!','Thêm vào giỏ hàng hàng thành công...','success',true,true,'pageMessages');">Thêm
+                            vào giỏ hàng</button>
+                    </div>
+                    <div class="">
+                        <div class="post">
+                            <a href="product-detail.html"><img src="./assets/img/home/product5.png"
+                                    alt="img product"></a>
+                            <div class="post-s">
+                                <div class="action">
+                                    <div class="action-icon" data-toggle="modal" data-target=".model-product-detail">
+                                        <span class="material-icons">search</span></div>
+                                </div>
+                                <div class="action add-wishlist"
+                                    onclick="createAlert('','','Đã thêm sản phẩm vào danh mục yêu thích','warning',false,true,'pageMessages');">
+                                    <div class="action-icon"><span class="material-icons">favorite_border</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="./product-detail.html">
+                            <p class="name-div">Ten san pham</p>
+                        </a>
+                        <p class="code-div">SP123456789</p>
+                        <p class="price-div">120.000 VNĐ</p>
+                        <button class="btn-add"
+                            onclick="createAlert('','Thông báo!','Thêm vào giỏ hàng hàng thành công...','success',true,true,'pageMessages');">Thêm
+                            vào giỏ hàng</button>
+                    </div>
+                    <div class="">
+                        <div class="post">
+                            <a href="product-detail.html"><img src="./assets/img/home/product5.png"
+                                    alt="img product"></a>
+                            <div class="post-s">
+                                <div class="action">
+                                    <div class="action-icon" data-toggle="modal" data-target=".model-product-detail">
+                                        <span class="material-icons">search</span></div>
+                                </div>
+                                <div class="action add-wishlist"
+                                    onclick="createAlert('','','Đã thêm sản phẩm vào danh mục yêu thích','warning',false,true,'pageMessages');">
+                                    <div class="action-icon"><span class="material-icons">favorite_border</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="./product-detail.html">
+                            <p class="name-div">Ten san pham</p>
+                        </a>
+                        <p class="code-div">SP123456789</p>
+                        <p class="price-div">120.000 VNĐ</p>
+                        <button class="btn-add"
+                            onclick="createAlert('','Thông báo!','Thêm vào giỏ hàng hàng thành công...','success',true,true,'pageMessages');">Thêm
+                            vào giỏ hàng</button>
+                    </div>
                 </div>
-                <p>200.000 VNĐ</p>
-            </div>
-            <hr>
-            <div class="wishitem">
-                <i class="material-icons">close</i>
-                <img src="./assets/img/home/bedroom1.jpg" width="80px" height="80px" alt="">
-                <h4>Ten san pham</h4>
-                <p>200.000 VNĐ</p>
-                <div class="qty">
-                    <span class="minus">-</span>
-                    <input type="number" class="count" name="qty" value="1">
-                    <span class="plus">+</span>
+                <div class="col-4 col43">
+                    <div class="">
+                        <div class="post">
+                            <a href="product-detail.html"><img src="./assets/img/home/product6.png"
+                                    alt="img product"></a>
+                            <div class="post-s">
+                                <div class="action">
+                                    <div class="action-icon" data-toggle="modal" data-target=".model-product-detail">
+                                        <span class="material-icons">search</span></div>
+                                </div>
+                                <div class="action add-wishlist"
+                                    onclick="createAlert('','','Đã thêm sản phẩm vào danh mục yêu thích','warning',false,true,'pageMessages');">
+                                    <div class="action-icon"><span class="material-icons">favorite_border</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="./product-detail.html">
+                            <p class="name-div">Ten san pham</p>
+                        </a>
+                        <p class="code-div">SP123456789</p>
+                        <p class="price-div">120.000 VNĐ</p>
+                        <button class="btn-add"
+                            onclick="createAlert('','Thông báo!','Thêm vào giỏ hàng hàng thành công...','success',true,true,'pageMessages');">Thêm
+                            vào giỏ hàng</button>
+                    </div>
+                    <div class="">
+                        <div class="post">
+                            <a href="product-detail.html"><img src="./assets/img/home/product6.png"
+                                    alt="img product"></a>
+                            <div class="post-s">
+                                <div class="action">
+                                    <div class="action-icon" data-toggle="modal" data-target=".model-product-detail">
+                                        <span class="material-icons">search</span></div>
+                                </div>
+                                <div class="action add-wishlist"
+                                    onclick="createAlert('','','Đã thêm sản phẩm vào danh mục yêu thích','warning',false,true,'pageMessages');">
+                                    <div class="action-icon"><span class="material-icons">favorite_border</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="./product-detail.html">
+                            <p class="name-div">Ten san pham</p>
+                        </a>
+                        <p class="code-div">SP123456789</p>
+                        <p class="price-div">120.000 VNĐ</p>
+                        <button class="btn-add"
+                            onclick="createAlert('','Thông báo!','Thêm vào giỏ hàng hàng thành công...','success',true,true,'pageMessages');">Thêm
+                            vào giỏ hàng</button>
+                    </div>
+                    <div class="">
+                        <div class="post">
+                            <a href="product-detail.html"><img src="./assets/img/home/product6.png"
+                                    alt="img product"></a>
+                            <div class="post-s">
+                                <div class="action">
+                                    <div class="action-icon" data-toggle="modal" data-target=".model-product-detail">
+                                        <span class="material-icons">search</span></div>
+                                </div>
+                                <div class="action add-wishlist"
+                                    onclick="createAlert('','','Đã thêm sản phẩm vào danh mục yêu thích','warning',false,true,'pageMessages');">
+                                    <div class="action-icon"><span class="material-icons">favorite_border</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="./product-detail.html">
+                            <p class="name-div">Ten san pham</p>
+                        </a>
+                        <p class="code-div">SP123456789</p>
+                        <p class="price-div">120.000 VNĐ</p>
+                        <button class="btn-add"
+                            onclick="createAlert('','Thông báo!','Thêm vào giỏ hàng hàng thành công...','success',true,true,'pageMessages');">Thêm
+                            vào giỏ hàng</button>
+                    </div>
                 </div>
-                <p>200.000 VNĐ</p>
-            </div>
-            <hr>
-            <div class="wishitem">
-                <i class="material-icons">close</i>
-                <img src="./assets/img/home/bedroom1.jpg" width="80px" height="80px" alt="">
-                <h4>Ten san pham</h4>
-                <p>200.000 VNĐ</p>
-                <div class="qty">
-                    <span class="minus">-</span>
-                    <input type="number" class="count" name="qty" value="1">
-                    <span class="plus">+</span>
-                </div>
-                <p>200.000 VNĐ</p>
-            </div>
-            <hr>
-            <div class="code-btn-div">
-                <div class="code-div">
-                    <input type="text" placeholder="Mã giảm giá">
-                    <button class="btn">Áp dụng</button>
-                </div>
-                <!-- <button class="btn">Update cart</button> -->
-            </div>
-        </div>
-        <hr>
-        <div class="total-price">
-            <a href="./product.html"><button class="btn">Thanh toán</button></a>
-            <div class="total-price-div">
-                <h5><b>Tổng:</b> &nbsp;</h5>
-                <h5>800.000 VNĐ</h5>
             </div>
         </div>
     </div>
+    <div id="pageMessages"></div>
     <!-- modal search -->
     <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">

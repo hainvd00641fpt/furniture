@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>About us</title>
+    <title>Cửa Hàng - Furnitury</title>
     <!-- Normalize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <!-- Bootstrap 4 -->
@@ -37,56 +37,126 @@
                 <ul class="nav">
                     <li><a href="index.html">Trang chủ</a></li>
                     <!-- <li><a href="about-us.html">Giới thiệu</a></li> -->
-                    <li class="dropdown"><a href="product.html">Sản phẩm
-                        <div class="dropdown-content">
-                            <a href="livingroom.html"><h5>Phòng Khách</h5></a>
-                            <a href="bedroom.html"><h5>Phòng Ngủ</h5></a>
-                            <a href="kitchen.html"><h5>Phòng Bếp</h5></a>
-                        </div>
-                    </a></li>
+                    <li id="menu-product"><a href="product.html">Sản phẩm
+                        </a></li>
                     <!-- <li><a href="contact.html">Liên hệ</a></li> -->
-                    <li><a href="store.html"  class="active">Cửa hàng</a></li>
-                    <li><a href="service.html">Dịch vụ</a></li>
+                    <li><a class="active" href="store.html">Cửa hàng</a></li>
+                    <li class="dropdown">
+                        <a href="#">Dịch vụ
+                            <div class="dropdown-content">
+                                <a href="service.html">
+                                    <h5>Thiết Kế Nội Thất</h5>
+                                </a>
+                                <a href="support.html">
+                                    <h5>Chăm Sóc Khách Hàng</h5>
+                                </a>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <div class="" style="width: 220px;"></div>
             <div class="header-end">
                 <ul class="nav">
-                    <li><img title="Search" data-toggle="modal" data-target="#searchModal" src="./assets/img/icon/search.png" alt="icon-search"></li></li>
+                    <li data-toggle="modal" data-target="#searchModal"><img title="Search" data-toggle="modal"
+                            data-target="#searchModal" src="./assets/img/icon/search.svg" alt="icon-search"></li>
+                    </li>
                     <li>
                         <a href="./wishlist.html" title="My wishlist">
-                            <img src="./assets/img/icon/heart.png" alt="icon-heart">
+                            <img src="./assets/img/icon/heart.svg" alt="icon-heart">
                         </a>
                         <span class="badge badge-danger">4</span>
                     </li>
                     <li>
                         <a href="./cart.html" title="Cart">
-                            <img src="./assets/img/icon/bag.png" alt="icon-bag" id="dropdownCart">
+                            <img src="./assets/img/icon/bag.svg" alt="icon-bag" id="dropdownCart">
                         </a>
                         <span class="badge badge-danger">2</span>
                     </li>
                 </ul>
-                </div>
             </div>
         </div>
     </header>
+    <div class="dropdown-fullwidth" id="dropdown-product">
+        <div class="row" style="padding: 30px;">
+            <div class="col">
+                <div class="submenu-header">
+                    <a href="livingroom.html">Phòng khách</a>
+                </div>
+                <div class="submenu-item">
+                    <div><a href="livingroom-sofa.html">Sofa</a></div>
+                    <div><a href="livingroom-table.html">Bàn cafe</a></div>
+                    <div><a href="livingroom-couch.html.html">Ghế bành</a></div>
+                    <div><a href="livingroom-shelves.html.html">Kệ TV</a></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="submenu-header">
+                    <a href="bedroom.html">Phòng ngủ</a>
+                </div>
+                <div class="submenu-item">
+                    <div><a href="bedroom-bed.html">Giường</a></div>
+                    <div><a href="bedroom-wardrobe.html">Tủ</a></div>
+                    <div><a href="bedroom-makeup-table.html">Bàn trang điểm</a></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="submenu-header">
+                    <a href="kitchen.html">Phòng ăn</a>
+                </div>
+                <div class="submenu-item">
+                    <div><a href="kitchen-table.html">Bàn ăn</a></div>
+                    <div><a href="kitchen-cabinet.html">Tủ bếp</a></div>
+                    <div><a href="kitchen-chair.html">Ghế</a></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="submenu-header">
+                    <a href="bathroom.html">Phòng tắm</a>
+                </div>
+                <div class="submenu-item">
+                    <div><a href="bathroom-curtain.html">Rèm</a></div>
+                    <div><a href="bathroom-towel.html">Khăn tắm</a></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="submenu-header">
+                    <a href="workroom.html">Phòng làm việc</a>
+                </div>
+                <div class="submenu-item">
+                    <div><a href="workroom-table.html">Bàn</a></div>
+                    <div><a href="workroom-shelves.html">Kệ sách</a></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="submenu-header">
+                    <a href="otherroom.html">Đồ trang trí</a>
+                </div>
+                <div class="submenu-item">
+                    <div><a href="otherroom-mirror.html">Gương</a></div>
+                    <div><a href="otherroom-wallpaper.html">Giấy dán tường</a></div>
+                    <div><a href="otherroom-flower.html">Hoa</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-     <!-- Body -->
-     <div class="img-header header-category">
+    <!-- Body -->
+    <div class="img-header" style="padding-top: 100px;">
         <div class="container-cust cart-hide">
             <div id="cart">
                 <div class="cart-div">
                     <div class="popup-cart">
                         <div class="">
                             <div class="item-product">
-                                <img src="./assets/img/home/bedroom1.jpg"alt="">
+                                <img src="./assets/img/home/bedroom1.jpg" alt="">
                                 <h5>Ten san pham</h5>
                                 <p><b>1</b> x 200.000 VNĐ</p>
                                 <i class="material-icons md-14">close</i>
                             </div>
                             <hr style="margin-top: 10px; margin-bottom: 10px;" />
                             <div class="item-product">
-                                <img src="./assets/img/home/bedroom1.jpg"alt="">
+                                <img src="./assets/img/home/bedroom1.jpg" alt="">
                                 <h5>Ten san pham</h5>
                                 <p><b>1</b> x 200.000 VNĐ</p>
                                 <i class="material-icons md-14">close</i>
@@ -98,35 +168,61 @@
                             <p>400.000 VNĐ</p>
                         </div>
                         <div class="btn-viewcart">
-                            <button>VIEW CART</button>
-                            <button>CHECKOUT</button>
+                            <a href="cart.html"><button>GIỎ HÀNG</button></a>
+                            <button>THANH TOÁN</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-         <div class="container-cust img-text-div">
-            <h2>Cửa hàng</h2>
-            <h6></h6>
-         </div>
     </div>
     <div class="container-cust" style="margin-top: 30px;">
-        <h4>GIỚI THIỆU</h4>
-        <P>Thưa quí vị, <br> Trong suốt gần n năm phục vụ - giao lưu - gặp gỡ với khách hàng, 
-            đã có rất nhiều lần quí vị quan tâm đến tên gọi “Furniture abc” với cấu trúc gợi sự thân 
-            thiện về môi trường từ và ý nghĩa của nó cùng một sự cảm tình ít nhiều dành cho tên gọi đó. <br> 
-            Không có tên gọi nào ngay từ khi nghĩ ra nó đã là hay cả. Nó chỉ gần gũi với mọi người một khi 
-            những dịch vụ và những Giá Trị mang lại cũng như tiếng vang của nó trong lòng người dùng, qua muôn 
-            vàn “ khó khăn, thử thách “ để đến một lúc nào đó nó có trong trí nhớ của nhiều người để mỗi khi 
-            lục tìm đến sản phẩm, dịch vụ gì đó người dùng Ưu Ái nghĩ đến tên đó trước trong muôn vàn những 
-            tên gọi khác cùng ngành hàng kinh doanh. Không ngoại lệ, tên Mew Furniture cũng vậy, ban đầu nó 
-            chỉ là một ý tưởng nhỏ “không giống ai” của chính chủ nhân nó thời khai sơn, tích thủy.</P>
+        <div class="banner-store">
+            <div class="text-banner-store">Giới thiệu</div>
+        </div>
+        <h4 style="margin-top: 50px; 
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 38px;">Công ty</h4>
+        <p style="
+        font-size: 18px;
+        line-height: 38px;">Công ty Furnitury được thành lập năm 2019 tại Hà Nội, Việt Nam. Người sáng lập công ty là
+            nhà thiết kế nội thất Bùi Sơn Tùng, anh là người Đức gốc Việt có hơn 20 năm kinh nghiệm trong lĩnh vực thiết
+            kế và cung cấp nội thất cao cấp. Tại Đức và châu Âu, thương hiệu Furnitury nổi tiếng với những thiết kế ấn
+            tượng, sang trọng, đẳng cấp. Công ty TNHH Furnitury Việt Nam mang đến những thiết kế giao thoa tinh tế giữa
+            văn hoá phương Đông và phương Tây, chinh phục được những khách hàng khó tính nhất. Hiện tại, công ty
+            Furnitury chuyên thực hiện những dự án thiết kế-trang trí nội thất và cung cấp nội thất cho các biệt thự,
+            căn hộ cá nhân và các dự án nhà hàng, khách sạn, bất động sản cao cấp. Thương hiệu Furnitury được khẳng định
+            là một công ty thiết kế nội thất ấn tượng, uy tín và chuyên môn cao. Khách hàng tìm đến Furnitury để tìm
+            thấy một chuyên gia trong thiết kế và trang trí nội thất luôn sáng tạo những công trình độc đáo và ấn tượng.
+            Mỗi công trình, Furnitury và cộng sự tiếp nhận là một thử thách mới được hoàn thiện trên tình thần trách
+            nhiệm cao.</p>
     </div>
     <div class="container-cust" style="margin-top: 30px;">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10532.689407389435!2d105.83211872481836!3d21.037964934644915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aba15ec15d17%3A0x620e85c2cfe14d4c!2zTMSDbmcgQ2jhu6cgdOG7i2NoIEjhu5MgQ2jDrSBNaW5o!5e0!3m2!1svi!2s!4v1584545722061!5m2!1svi!2s" width="1110" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10532.689407389435!2d105.83211872481836!3d21.037964934644915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aba15ec15d17%3A0x620e85c2cfe14d4c!2zTMSDbmcgQ2jhu6cgdOG7i2NoIEjhu5MgQ2jDrSBNaW5o!5e0!3m2!1svi!2s!4v1584545722061!5m2!1svi!2s"
+            width="1110" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0"></iframe>
+    </div>
+    <!-- modal search -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm..." aria-label="Tìm kiếm..."
+                            aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Tìm</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- End Body -->
-    
+
     <footer>
         <div class="footer-top">
             <ul class="nav container-cust">
@@ -169,7 +265,7 @@
             </div>
         </div>
     </footer>
-  </body>
+</body>
 <script type="text/javascript" src="./assets/js/main.js"></script>
 
 </html>
